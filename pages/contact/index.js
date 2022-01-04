@@ -1,6 +1,6 @@
 import React, { useRef, useState } from 'react';
 import Navbar from '../../components/Navbar';
-import { Form, Wrapper } from './Contact.styled';
+import { Form, Wrapper } from '../../styles/Contact.styled';
 import emailjs from 'emailjs-com';
 
 const Contact = () => {

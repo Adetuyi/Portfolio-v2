@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { callbackFuncTwo } from '../../utils/IntersectionObserver';
 import Navbar from '../../components/Navbar';
-import { Wrapper } from './Skills.styled';
+import { Wrapper } from '../../styles/Skills.styled';
 import Image from 'next/image';
 
 const Skills = () => {
