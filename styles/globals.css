@@ -1,16 +1,91 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800;900&family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Roboto+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap');
 
 * {
-  box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Roboto Condensed', sans-serif;
+}
+:root {
+	--bgClr: #1d1d1d;
+	--mainClr: #07252d;
+	--secClr: #1e8ba8;
+	--terClr: #08fdd8;
+	--fbarClr: purple;
+	--bbarClr: rgb(255, 136, 0);
+}
+body {
+	background-color: var(--bgClr);
+	color: #fafafa;
+}
+html {
+	scroll-behavior: smooth;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: 'Raleway', 'Roboto Condensed', sans-serif;
+	color: var(--terClr);
+}
+article,
+.contained {
+	max-width: 1200px;
+	margin: 0 auto !important;
+}
+h1 {
+	margin-bottom: 0.3em;
+	font-size: 2.5rem;
+}
+h2 {
+	margin-bottom: 0.3em;
+	font-size: 2rem;
+}
+h3 {
+	margin: 1.5em 0 0.5em;
+	font-size: 2rem;
+}
+h4 {
+	margin: 1.5em 0 0.5em;
+	font-size: 1.4rem;
+}
+article p {
+	font-size: 1.1rem;
+	line-height: 1.3em;
+	margin-bottom: 0.6em;
+}
+article p a {
+	display: inline-block;
+	font-family: inherit;
+	text-decoration: none;
+	color: var(--secClr);
+	cursor: pointer;
+	width: max-content;
+}
+article a:hover {
+	text-decoration: underline;
+}
+@media (max-width: 425px) {
+	article {
+		padding: 1em;
+	}
+	article h2 {
+		font-size: 2rem;
+	}
+}
+@media (min-width: 425px) {
+	h1 {
+		font-size: 3rem;
+	}
+	h2 {
+		font-size: 3rem;
+	}
+	h3 {
+		font-size: 2.5rem;
+	}
+	h4 {
+		font-size: 2rem;
+	}
 }
