@@ -1,12 +1,12 @@
 import styled from 'styled-components';
 
 export const Wrapper = styled.article`
-	padding: 3em 2em 0;
+	padding: 0 1em;
 
 	> section {
 		display: flex;
 		align-items: center;
-		gap: 2em;
+		gap: 1em 2em;
 
 		article {
 			flex-basis: 50%;
@@ -25,6 +25,7 @@ export const Wrapper = styled.article`
 
 	.skills {
 		flex-basis: 50%;
+
 		label {
 			display: inline-block;
 			font-size: 1.3rem;
@@ -39,7 +40,7 @@ export const Wrapper = styled.article`
 			position: relative;
 			overflow: hidden;
 		}
-		.bar:before {
+		.bar::before {
 			content: '';
 			position: absolute;
 			top: 0;
@@ -57,7 +58,7 @@ export const Wrapper = styled.article`
 			background: var(--fbarClr);
 		}
 		.bbar:before {
-			width: 40%;
+			width: 35%;
 			background: var(--bbarClr);
 		}
 	}
@@ -69,6 +70,7 @@ export const Wrapper = styled.article`
 		grid-row-gap: 1em;
 		max-width: 100%;
 		margin-bottom: 2em;
+		font-weight: 300;
 
 		div {
 			margin: 0;
@@ -76,8 +78,13 @@ export const Wrapper = styled.article`
 			label {
 				display: block;
 				font-size: 1.3rem;
+				font-weight: 400;
 				margin-bottom: 0.2em;
 			}
+		}
+
+		@media (max-width: 240px) {
+			grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
 		}
 	}
 
@@ -88,9 +95,10 @@ export const Wrapper = styled.article`
 		flex-wrap: wrap;
 		gap: 2rem 3rem;
 		text-align: center;
+		padding-bottom: 1em;
 
 		div {
-			width: max-content;
+			width: 100px;
 			height: 80px;
 			display: flex;
 			justify-content: space-between;
@@ -105,6 +113,11 @@ export const Wrapper = styled.article`
 			p {
 				margin: 0;
 			}
+		}
+
+		@media (max-width: 425px) {
+			gap: 1em 0;
+			justify-content: space-around;
 		}
 	}
 `;

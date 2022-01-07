@@ -1,11 +1,9 @@
 import styled from 'styled-components';
 
 export const Wrapper = styled.div`
-	height: 900px;
-	max-height: 90vh;
+	height: clamp(500px, 90vh, 900px);
 	overflow: hidden;
 	position: relative;
-	background: var(--mainClr);
 
 	section {
 		padding: 0 2em 2em;
@@ -13,17 +11,24 @@ export const Wrapper = styled.div`
 		display: flex;
 		align-items: center;
 
-		> div {
+		div:nth-child(1) {
+			flex-basis: 50%;
+		}
+
+		> .logo {
 			flex-grow: 1;
+			text-align: center;
 		}
 		h2 {
 			font-size: 5rem;
+			min-height: 1.2em;
 			width: max-content;
 			color: #fff;
 		}
 		p {
 			font-size: 3rem;
 			width: max-content;
+			min-height: 1.2em;
 		}
 		h2,
 		p {
@@ -44,12 +49,7 @@ export const Wrapper = styled.div`
 		a {
 			display: inline-block;
 			padding: 0.5em 1em;
-			font-size: 1.3rem;
-			background: var(--secClr);
-			color: #fff;
-			text-decoration: none;
 			margin-top: 1.5em;
-			cursor: pointer;
 			transform: translateY(20px);
 			opacity: 0;
 			animation: fadeInUp 0.8s 8s linear forwards;
@@ -82,29 +82,19 @@ export const Wrapper = styled.div`
 		20% {
 			content: 'He';
 		}
-		30% {
-			content: 'Hel';
-		}
+		30%,
 		40% {
-			content: 'Hell';
+			content: 'Hel';
 		}
 		50%,
 		60% {
-			content: 'Hello';
-		}
-		65% {
-			content: 'Hell';
-		}
-		70% {
-			content: 'Hel';
-		}
-		75% {
 			content: 'He';
 		}
-		80% {
+		65%,
+		70% {
 			content: 'H';
 		}
-		85%,
+		75%,
 		100% {
 			content: 'Hi';
 		}
@@ -122,33 +112,23 @@ export const Wrapper = styled.div`
 		20% {
 			content: 'My n';
 		}
-		25% {
-			content: 'My na';
-		}
-		30% {
-			content: 'My nam';
-		}
+		25%,
 		35% {
-			content: 'My name';
+			content: 'My na';
 		}
 		38% {
-			content: 'My nam';
-		}
-		41% {
-			content: 'My na';
-		}
-		44% {
 			content: 'My n';
 		}
-		47% {
+		41% {
 			content: 'My ';
 		}
-		50% {
+		44% {
 			content: 'My';
 		}
-		53% {
+		47% {
 			content: 'M';
 		}
+		50%,
 		56% {
 			content: '';
 		}
@@ -222,43 +202,42 @@ export const Wrapper = styled.div`
 		82.25% {
 			content: 'a web develope';
 		}
-		88.5% {
-			content: 'a web developer';
-		}
-		94.75%,
+		88.5%,
 		100% {
-			content: ' a web developer.';
+			content: ' a web developer';
 		}
 	}
 
 	@media (max-width: 768px) {
-		img {
-			display: none;
+		.logo {
+			display: none !important;
 		}
 		> p {
-			font-size: 0.9rem;
+			font-size: 1rem;
+		}
+		section {
+			h2 {
+				font-size: 4rem;
+			}
+			p {
+				font-size: 2.5rem;
+			}
 		}
 	}
 	@media (max-width: 580px) {
-		h2 {
-			font-size: 4rem;
-		}
-		section p {
-			font-size: 2rem;
-		}
 		a {
 			font-size: 1.1rem;
 		}
 	}
 	@media (max-width: 375px) {
 		section {
-			padding: 0 1.3em;
+			padding: 0 1em;
 		}
-		h2 {
+		section h2 {
 			font-size: 3rem;
 		}
 		section p {
-			font-size: 1.5rem;
+			font-size: 1.7rem;
 		}
 	}
 `;

@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800;900&family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Roboto+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css');
 
 * {
 	margin: 0;
@@ -8,15 +9,17 @@
 }
 :root {
 	--bgClr: #1d1d1d;
+	--cubeBgClr: #202020;
 	--mainClr: #07252d;
 	--secClr: #1e8ba8;
 	--terClr: #08fdd8;
-	--fbarClr: purple;
-	--bbarClr: rgb(255, 136, 0);
+	--fbarClr: rgb(196, 0, 196);
+	--bbarClr: rgb(190, 102, 0);
 }
 body {
 	background-color: var(--bgClr);
 	color: #fafafa;
+	padding: 3rem 1rem 1rem;
 }
 html {
 	scroll-behavior: smooth;
@@ -36,25 +39,32 @@ article,
 	margin: 0 auto !important;
 }
 h1 {
-	margin-bottom: 0.3em;
-	font-size: 2.5rem;
+	font-size: 4rem;
 }
 h2 {
 	margin-bottom: 0.3em;
-	font-size: 2rem;
+	font-size: 4rem;
 }
 h3 {
-	margin: 1.5em 0 0.5em;
+	margin: 1.2em 0 0.5em;
 	font-size: 2rem;
 }
 h4 {
-	margin: 1.5em 0 0.5em;
+	margin: 1.2em 0 0.5em;
 	font-size: 1.4rem;
 }
+article {
+	padding: 0 1em;
+}
 article p {
-	font-size: 1.1rem;
-	line-height: 1.3em;
-	margin-bottom: 0.6em;
+	font-size: 1.3rem;
+	font-weight: 300;
+	line-height: 1.2em;
+	margin-bottom: 0.4em;
+	padding-left: 0.5em;
+}
+a {
+	text-decoration: none;
 }
 article p a {
 	display: inline-block;
@@ -68,19 +78,27 @@ article a:hover {
 	text-decoration: underline;
 }
 @media (max-width: 425px) {
+	h1 {
+		font-size: 2.5rem;
+	}
 	article {
-		padding: 1em;
+		padding: 0;
 	}
 	article h2 {
 		font-size: 2rem;
 	}
 }
+@media (max-width: 768px) {
+	article p {
+		font-size: 1.2rem;
+	}
+}
 @media (min-width: 425px) {
 	h1 {
-		font-size: 3rem;
+		font-size: 3.5rem;
 	}
 	h2 {
-		font-size: 3rem;
+		font-size: 3.5rem;
 	}
 	h3 {
 		font-size: 2.5rem;

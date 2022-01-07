@@ -1,0 +1,5 @@
+404 page
+parallax
+new logo
+avatar
+button

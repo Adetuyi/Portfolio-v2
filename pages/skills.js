@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import { callbackFuncTwo } from '../../utils/IntersectionObserver';
-import Navbar from '../../components/Navbar';
-import { Wrapper } from '../../styles/Skills.styled';
+import { callbackFunc } from '../utils/IntersectionObserver';
+import Navbar from '../components/Navbar';
+import { Wrapper } from '../styles/Skills.styled';
 import Image from 'next/image';
 
 const Skills = () => {
@@ -10,7 +10,7 @@ const Skills = () => {
 
 	useEffect(() => {
 		//Bar Observer
-		const observer = new IntersectionObserver(callbackFuncTwo, {
+		const observer = new IntersectionObserver(callbackFunc, {
 			threshold: 1,
 			rootMargin: '0px 0px -300px 0px',
 		});
@@ -55,6 +55,29 @@ const Skills = () => {
 						<div className='bbar bar'></div>
 					</div>
 				</section>
+
+				<h3>Quirks</h3>
+				<div className='quirks'>
+					<div>
+						<label>Responsive Design</label>
+						<span>Creating responsive sites across all screen sizes</span>
+					</div>
+					<div>
+						<label>Problem Solving</label>
+						<span>Solve problems cleanly and efficiently</span>
+					</div>
+					<div>
+						<label>Fast learner</label>
+						<span>
+							Fast rate of learning new skills enabling easier and faster adaptation
+						</span>
+					</div>
+					<div>
+						<label>Versatile</label>
+						<span>High flexibilty and competence</span>
+					</div>
+				</div>
+
 				<h4>Technologies</h4>
 				<article className='technologies'>
 					<div>
@@ -94,28 +117,6 @@ const Skills = () => {
 						<p>C</p>
 					</div>
 				</article>
-
-				<h3>Quirks</h3>
-				<div className='quirks'>
-					<div>
-						<label>Responsive Design</label>
-						<span>Creating responsive sites across all screen sizes</span>
-					</div>
-					<div>
-						<label>Problem Solving</label>
-						<span>Solve problems cleanly and efficiently</span>
-					</div>
-					<div>
-						<label>Fast learner</label>
-						<span>
-							Fast rate of learning new skills enabling easier and faster adaptation
-						</span>
-					</div>
-					<div>
-						<label>Versatile</label>
-						<span>High flexibilty and competence</span>
-					</div>
-				</div>
 			</Wrapper>
 		</>
 	);

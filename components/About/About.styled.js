@@ -1,17 +1,21 @@
 import styled from 'styled-components';
 
 export const Wrapper = styled.article`
-	padding: 2em;
 	font-family: sans-serif;
-
-	> div {
+	> section article {
+		padding: 0;
+	}
+	> section > div {
 		display: flex;
 		align-items: center;
 		gap: 2em;
 
+		.laptop {
+			flex-basis: 50%;
+		}
+
 		article {
 			flex-basis: 50%;
-			padding: 0;
 		}
 
 		@media (max-width: 1024px) {

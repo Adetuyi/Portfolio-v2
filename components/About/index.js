@@ -1,14 +1,10 @@
 import React from 'react';
 import { Wrapper } from './About.styled';
-import Comp from '../../components/Comp';
 
-const About = ({ compRef, isInPage, children }) => {
+const About = ({ children }) => {
 	return (
-		<Wrapper id='about'>
-			<div id='main-content'>
-				{<Comp compRef={compRef} isInPage={isInPage} />}
-				{children}
-			</div>
+		<Wrapper>
+			<section id='main-content'>{children}</section>
 		</Wrapper>
 	);
 };

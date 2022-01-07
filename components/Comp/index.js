@@ -1,14 +1,13 @@
+import Image from 'next/image';
 import React from 'react';
 import { Wrapper } from './Comp.styled';
 
-const Comp = ({ compRef, isInPage }) => {
+const Comp = () => {
 	// document.body.classList.add('dark-mode');
 	return (
-		<Wrapper>
-			<h1 className={isInPage ? 'shine active' : 'shine'} ref={compRef}>
-				Seyi Adetuyi
-			</h1>
-			<img src='/svgs/comp.svg' alt='' />
+		<Wrapper className='laptop'>
+			<h1 className='shine active'>Seyi Adetuyi</h1>
+			<Image width={500} height={500} src='/svgs/laptop.svg' alt='' />
 		</Wrapper>
 	);
 };

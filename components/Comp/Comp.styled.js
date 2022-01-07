@@ -7,59 +7,42 @@ export const Wrapper = styled.div`
 	align-items: center;
 	overflow: hidden;
 
-	img {
-		width: 599px;
-		max-width: 100%;
-	}
 	h1 {
 		position: absolute;
 		user-select: none;
+		z-index: 1;
 		top: 50%;
 		left: 50%;
-		font-size: 3rem;
-		transform: translate(-50%, calc(-50% - 30px));
+		font-size: 2.5rem;
+		transform: translate(-50%, calc(-50% - 40px));
 		width: max-content;
 		background: transparent;
-		color: #0e3742;
+		color: #367790;
 		text-transform: uppercase;
 		-webkit-box-reflect: below 1px linear-gradient(transparent, #0008);
 		line-height: 0.7em;
+		animation: lightUp 3.5s 2s linear forwards;
 
-		@media (max-width: 670px) {
-			font-size: 2.5rem;
+		@media (max-width: 560px) {
+			font-size: 2.2rem;
 		}
+
 		@media (max-width: 480px) {
-			font-size: 1.7rem;
-			transform: translate(-50%, calc(-50% - 20px));
-		}
-		@media (max-width: 370px) {
-			font-size: 1.3rem;
-			transform: translate(-50%, calc(-50% - 20px));
-		}
-	}
-	h1.active {
-		animation: lightUp 3.5s linear forwards;
-
-		::before {
-			content: '';
-			position: absolute;
-			width: 1px;
-			border-radius: 50% 0 0 50%;
-			height: 150%;
-			top: 0;
-			left: 0;
-			transform: translateX(-100%);
+			font-size: 1.8rem;
+			transform: translate(-50%, calc(-50% - 30px));
 		}
 
-		::after {
-			content: '';
-			position: absolute;
-			width: 1px;
-			border-radius: 50%;
-			height: 150%;
-			top: 0;
-			right: 0;
-			transform: translateX(100%);
+		@media (max-width: 380px) {
+			font-size: 1.5rem;
+			transform: translate(-50%, calc(-50% - 25px));
+		}
+
+		@media (max-width: 320px) {
+			font-size: 1.2rem;
+			transform: translate(-50%, calc(-50% - 18px));
+		}
+		@media (max-width: 260px) {
+			font-size: 1rem;
 		}
 	}
 
@@ -75,7 +58,7 @@ export const Wrapper = styled.div`
 		70%,
 		75%,
 		95% {
-			color: #0e3742;
+			color: #367790;
 			text-shadow: none;
 		}
 		6%,

@@ -3,8 +3,11 @@ import styled from 'styled-components';
 export const Wrapper = styled.header`
 	position: fixed;
 	top: 0;
+	left: 0;
 	z-index: 2;
+	font-size: 1.2rem;
 	width: 100%;
+	background: var(--bgClr);
 
 	> a {
 		color: #fff;
@@ -15,8 +18,9 @@ export const Wrapper = styled.header`
 		position: absolute;
 		top: 0;
 		left: 0;
-		transform: translateY(-70px);
-		transition: 0.5s;
+		transform: translateY(-200px);
+		transition: 0.3s;
+		z-index: 100;
 
 		:focus,
 		:hover {
@@ -25,34 +29,59 @@ export const Wrapper = styled.header`
 	}
 
 	nav {
-		background: var(--mainClr);
-		transition: background 0.5s;
-
-		.contained {
-			display: flex;
-			justify-content: space-between;
-			align-items: center;
-			padding: 0 2em;
-			position: relative;
-
-			> a {
-				cursor: pointer;
-			}
-		}
-		section {
-			height: max-content;
-		}
-		.contained > a > svg {
-			width: 1.2em;
-			height: 2.4em;
-		}
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 0 2em;
+		position: relative;
+		height: 43px;
 
 		a {
+			cursor: pointer;
+		}
+
+		svg {
+			width: 1.2em;
+			height: 2em;
+		}
+
+		header {
+			display: none;
+			background: #0009;
+			padding: 0 1em 1em;
+			margin-bottom: 2em;
+
+			svg {
+				width: 70px;
+				height: 120px;
+			}
+			h2 {
+				font-size: 1.7rem;
+				color: #fff;
+				text-align: center;
+				margin: -1.2em 0 0.5em;
+			}
+			p {
+				font-size: 1.1rem;
+				text-align: center;
+				text-transform: capitalize;
+			}
+		}
+		.socials {
+			display: none;
+			position: fixed;
+			bottom: 0;
+			padding: 5px 5px 10px;
+			width: 100%;
+			text-align: center;
+			background: var(--bgClr);
+		}
+
+		section a {
 			color: #fff;
 			text-decoration: none;
-			padding: 0.3em 0.6em;
+			padding: 0.3em 0.5em;
 			margin: 0 0.4em;
-			cursor: pointer;
 
 			:hover,
 			:focus {
@@ -68,11 +97,11 @@ export const Wrapper = styled.header`
 			display: none;
 
 			svg {
-				width: 18px;
+				width: 23px;
 			}
 
 			.close {
-				width: 15px;
+				width: 20px;
 			}
 
 			path {
@@ -80,31 +109,56 @@ export const Wrapper = styled.header`
 			}
 		}
 	}
-	nav.bg-light {
-		background: hsl(0, 0%, 15%);
-		box-shadow: 0 0 5px rgba(0 0 0 / 0.1);
-	}
+
 	@media (max-width: 768px) {
-		nav button {
-			display: inline-block;
+		nav {
+			padding: 0 1em;
+
+			header {
+				display: block;
+				text-align: center;
+
+				a {
+					display: inline-block;
+				}
+			}
+			.socials {
+				display: block;
+				text-align: center;
+			}
+			button {
+				display: inline-block;
+			}
 		}
 		section {
-			background: hsl(0, 0%, 15%);
-			position: absolute;
-			top: calc(100% + 1px);
-			left: 50%;
-			transform: translateX(-50%);
-			width: 500px;
-			max-width: calc(100% - 4rem);
-			border-radius: 4px;
-			box-shadow: 0 1px 5px rgba(0 0 0 / 0.4);
+			background: var(--bgClr);
+			position: fixed;
+			z-index: 10;
+			top: 43px;
+			left: 0;
+			width: 100%;
+			min-height: fit-content;
+			height: calc(100% - 43px);
+			overflow-y: auto;
 		}
 		section.inactive {
 			display: none;
 		}
-		section a {
-			display: block;
-			text-align: center;
+		section > a {
+			:not(:nth-child(1)) {
+				display: block;
+				border-top: 1px solid #ccc2;
+				text-align: center;
+				line-height: 1.8em;
+			}
+			:nth-child(6) {
+				border-bottom: 1px solid #ccc2;
+				margin-bottom: 4em;
+			}
+			:hover,
+			:focus {
+				color: var(--terClr);
+			}
 		}
 	}
 `;
