@@ -1,5 +1,2 @@
-404 page
-parallax
+bot saying hello
 new logo
-avatar
-button

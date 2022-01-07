@@ -5,11 +5,28 @@ export const Wrapper = styled.div`
 	overflow: hidden;
 	position: relative;
 
+	.parallax {
+		position: absolute;
+		display: none;
+		width: 100%;
+		height: 100%;
+	}
+	.layer {
+		position: absolute;
+		top: 0;
+		left: 0;
+		min-width: 1150px;
+		height: 100%;
+		z-index: -1;
+		object-fit: cover;
+	}
+
 	section {
 		padding: 0 2em 2em;
 		height: 100%;
 		display: flex;
 		align-items: center;
+		gap: 1em;
 
 		div:nth-child(1) {
 			flex-basis: 50%;
@@ -18,6 +35,11 @@ export const Wrapper = styled.div`
 		> .logo {
 			flex-grow: 1;
 			text-align: center;
+			animation: upDown 5s linear infinite;
+
+			img {
+				border-radius: 50%;
+			}
 		}
 		h2 {
 			font-size: 5rem;
@@ -72,6 +94,14 @@ export const Wrapper = styled.div`
 		to {
 			opacity: 1;
 			transform: translateY(0);
+		}
+	}
+	@keyframes upDown {
+		25% {
+			transform: translateY(10px);
+		}
+		75% {
+			transform: translateY(-10px);
 		}
 	}
 
@@ -209,9 +239,6 @@ export const Wrapper = styled.div`
 	}
 
 	@media (max-width: 768px) {
-		.logo {
-			display: none !important;
-		}
 		> p {
 			font-size: 1rem;
 		}
@@ -231,6 +258,11 @@ export const Wrapper = styled.div`
 			font-size: 1.1rem;
 		}
 	}
+	@media (max-width: 500px) {
+		.logo {
+			display: none;
+		}
+	}
 	@media (max-width: 375px) {
 		section {
 			padding: 0;
@@ -240,6 +272,11 @@ export const Wrapper = styled.div`
 		}
 		section p {
 			font-size: 1.7rem;
+		}
+	}
+	@media (hover: hover) {
+		.parallax {
+			display: block;
 		}
 	}
 `;
