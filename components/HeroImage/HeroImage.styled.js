@@ -216,6 +216,8 @@ export const Wrapper = styled.div`
 			font-size: 1rem;
 		}
 		section {
+			padding: 0 1em 2em;
+
 			h2 {
 				font-size: 4rem;
 			}
@@ -231,7 +233,7 @@ export const Wrapper = styled.div`
 	}
 	@media (max-width: 375px) {
 		section {
-			padding: 0 1em;
+			padding: 0;
 		}
 		section h2 {
 			font-size: 3rem;

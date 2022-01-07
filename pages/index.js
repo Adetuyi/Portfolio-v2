@@ -5,7 +5,7 @@ import MiniWorks from '../components/MiniWorks';
 import Navbar from '../components/Navbar';
 import Contact from './contact';
 
-export default function Home() {
+export default function Home({ service_id, template_id, user_id }) {
 	return (
 		<>
 			<Navbar />
@@ -50,7 +50,17 @@ export default function Home() {
 			<br />
 			<br />
 			<br />
-			<Contact />
+			<Contact service_id={service_id} template_id={template_id} user_id={user_id} />
 		</>
 	);
 }
+
+export const getStaticProps = () => {
+	const service_id = process.env.SERVICE_ID;
+	const template_id = process.env.TEMPLATE_ID;
+	const user_id = process.env.USER_ID;
+
+	return {
+		props: { service_id, template_id, user_id },
+	};
+};

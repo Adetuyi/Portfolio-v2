@@ -3,6 +3,7 @@ import React from 'react';
 import About from '../components/About';
 import Navbar from '../components/Navbar';
 import Comp from '../components/Comp';
+import Socials from '../components/Socials';
 
 const about = () => {
 	return (
@@ -47,6 +48,7 @@ const about = () => {
 					</article>
 				</div>
 			</About>
+			<Socials />
 		</>
 	);
 };

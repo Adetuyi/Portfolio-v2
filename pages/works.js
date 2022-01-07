@@ -1,5 +1,6 @@
 import React from 'react';
 import Navbar from '../components/Navbar';
+import Socials from '../components/Socials';
 
 const Projects = () => {
 	return (
@@ -10,6 +11,7 @@ const Projects = () => {
 				<br />
 				<p>Work in progress : &#41;</p>
 			</article>
+			<Socials />
 		</>
 	);
 };

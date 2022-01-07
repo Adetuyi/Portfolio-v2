@@ -10,6 +10,7 @@ const Window = ({ rotation }) => {
 	const left = useRef(null);
 	const right = useRef(null);
 	const cube = useRef(null);
+	const refs = [front, right, back, left];
 
 	useEffect(() => {
 		window.onresize = () => {
@@ -18,6 +19,7 @@ const Window = ({ rotation }) => {
 		window.onload = () => {
 			setTransitions();
 		};
+		setTransitions();
 
 		return () => {
 			window.onresize = window.onload = null;
@@ -52,100 +54,40 @@ const Window = ({ rotation }) => {
 			tallest = rHght;
 		}
 
-		cube.current.style.height = `${tallest + 50}px`;
+		cube.current.style.height = `${tallest + 48}px`;
 	}
 
 	return (
 		<>
 			<Wrapper ref={cube}>
-				<Section className='front' ref={front}>
-					<Content>
-						<Image width={800} height={400} src={data.works[0].image} alt='' />
+				{data.works.map((work, index) => {
+					if (index >= 4) return null;
 
-						<h4>{data.works[0].name}</h4>
+					return (
+						<Section ref={refs[index]} key={index}>
+							<Content>
+								<Image width={800} height={400} src={work.image} alt='' />
 
-						<p>{data.works[0].desc}</p>
-						<p>
-							Built with:&nbsp;{' '}
-							{data.works[0].langs.map((lang, index) => {
-								if (index === data.works[1].langs.length - 1) {
-									return lang;
-								} else {
-									return lang + ', ';
-								}
-							})}
-						</p>
-						<a href={data.works[0].link} target='_blank' rel='noreferrer'>
-							<Button text='Visit' />
-						</a>
-					</Content>
-				</Section>
-				<Section className='back' ref={back}>
-					<Content>
-						<Image width={800} height={400} src={data.works[1].image} alt='' />
+								<h4>{work.name}</h4>
 
-						<h4>{data.works[1].name}</h4>
-
-						<p>{data.works[1].desc}</p>
-						<p>
-							Built with:&nbsp;{' '}
-							{data.works[1].langs.map((lang, index) => {
-								if (index === data.works[1].langs.length - 1) {
-									return lang;
-								} else {
-									return lang + ', ';
-								}
-							})}
-						</p>
-						<a href={data.works[1].link} target='_blank' rel='noreferrer'>
-							<Button text='Visit' />
-						</a>
-					</Content>
-				</Section>
-				<Section className='left' ref={left}>
-					<Content>
-						<Image width={800} height={400} src={data.works[2].image} alt='' />
-
-						<h4>{data.works[2].name}</h4>
-
-						<p>{data.works[2].desc}</p>
-						<p>
-							Built with:&nbsp;{' '}
-							{data.works[2].langs.map((lang, index) => {
-								if (index === data.works[1].langs.length - 1) {
-									return lang;
-								} else {
-									return lang + ', ';
-								}
-							})}
-						</p>
-						<a href={data.works[2].link} target='_blank' rel='noreferrer'>
-							<Button text='Visit' />
-						</a>
-					</Content>
-				</Section>
-				<Section className='right' ref={right}>
-					<Content>
-						<Image width={800} height={400} src={data.works[3].image} alt='' />
-
-						<h4>{data.works[3].name}</h4>
-
-						<p>{data.works[3].desc}</p>
-						<p>
-							Built with:&nbsp;{' '}
-							{data.works[3].langs.map((lang, index) => {
-								if (index === data.works[1].langs.length - 1) {
-									return lang;
-								} else {
-									return lang + ', ';
-								}
-							})}
-						</p>
-						<a href={data.works[3].link} target='_blank' rel='noreferrer'>
-							<Button text='Visit' />
-						</a>
-					</Content>
-				</Section>
+								<p>{work.desc}</p>
+								<p>
+									Built with:&nbsp;{' '}
+									{work.langs.map((lang, index) => {
+										if (index === work.langs.length - 1) {
+											return lang;
+										} else {
+											return lang + ', ';
+										}
+									})}
+								</p>
+								<a href={work.link} target='_blank' rel='noreferrer'>
+									<Button text='Visit' />
+								</a>
+							</Content>
+						</Section>
+					);
+				})}
 			</Wrapper>
 		</>
 	);

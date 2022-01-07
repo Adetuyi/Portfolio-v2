@@ -6,12 +6,12 @@ export const Wrapper = styled.article`
 	.cube {
 		position: relative;
 		max-width: 900px;
-		margin: 0 auto;
+		margin: 3em auto 0;
 
 		> button {
 			position: absolute;
 			top: 50%;
-			transform: translateY(-50%);
+			transform: translateY(calc(-50% - 70px));
 			font-size: 2rem;
 			padding: 0 0.3em;
 			background: rgb(0 0 0 / 0.3);

@@ -10,6 +10,8 @@ export const Wrapper = styled.div`
 	h1 {
 		position: absolute;
 		user-select: none;
+		-webkit-text-stroke: 1px #555;
+		font-weight: 800;
 		z-index: 1;
 		top: 50%;
 		left: 50%;
@@ -60,6 +62,7 @@ export const Wrapper = styled.div`
 		95% {
 			color: #367790;
 			text-shadow: none;
+			-webkit-text-stroke: 1px #555;
 		}
 		6%,
 		26%,
@@ -71,6 +74,8 @@ export const Wrapper = styled.div`
 			color: aqua;
 			text-shadow: 0 0 10px #03bcf4, 0 0 20px #03bcf4, 0 0 40px #03bcf4, 0 0 80px #03bcf4,
 				0 0 160px #03bcf4;
+
+			-webkit-text-stroke: 0px #555;
 			::before {
 				box-shadow: -10px 0 60px #03bcf4, -10px 0 60px #03bcf4, -10px 0 60px #03bcf4,
 					-10px 0 60px #03bcf4;

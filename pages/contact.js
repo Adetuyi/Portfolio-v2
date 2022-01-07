@@ -3,17 +3,8 @@ import Navbar from '../components/Navbar';
 import { Form, Wrapper } from '../styles/Contact.styled';
 import emailjs from 'emailjs-com';
 import Image from 'next/image';
+import Socials from '../components/Socials';
 
-export const getStaticProps = () => {
-	const service_id = process.env.SERVICE_ID;
-	const template_id = process.env.TEMPLATE_ID;
-	const user_id = process.env.USER_ID;
-	console.log(service_id, template_id, user_id);
-
-	return {
-		props: { service_id, template_id, user_id },
-	};
-};
 const Contact = ({ service_id, template_id, user_id }) => {
 	const [name, setName] = useState('');
 	const [email, setEmail] = useState('');
@@ -23,7 +14,7 @@ const Contact = ({ service_id, template_id, user_id }) => {
 	const feedback = useRef();
 	const [msg, setMsg] = useState('I see you peeping');
 	const [isMsgShowing, setIsMsgShowing] = useState(false);
-	const [isBtnDisabled, setIsBtnDisabled] = useState(false);
+	const [isSending, setIsSending] = useState(false);
 	const timeout = useRef();
 
 	const sendEmail = () => {
@@ -33,6 +24,7 @@ const Contact = ({ service_id, template_id, user_id }) => {
 				setMsg("Email sent successfully. I'll get back as soon as I can.");
 				showPopUp();
 				clearInputs();
+				setIsSending(false);
 			},
 			error => {
 				console.log(error.text);
@@ -66,7 +58,8 @@ const Contact = ({ service_id, template_id, user_id }) => {
 
 	function submitForm(e) {
 		e.preventDefault();
-		setIsBtnDisabled(true);
+		setIsSending(true);
+
 		try {
 			if (name.length > 0 && email.length > 0 && message.length > 0) {
 				if (!validateEmail(email)) {
@@ -85,8 +78,8 @@ const Contact = ({ service_id, template_id, user_id }) => {
 				setMsg('Something went wrong');
 				showPopUp();
 			}
+			setIsSending(false);
 		}
-		setIsBtnDisabled(false);
 	}
 	function clearInputs() {
 		setName('');
@@ -143,17 +136,15 @@ const Contact = ({ service_id, template_id, user_id }) => {
 							<textarea
 								name='message'
 								cols='90'
-								rows='5'
+								rows='8'
 								placeholder='Message *'
 								maxLength={1000}
 								value={message}
 								onChange={e => setMessage(e.target.value)}
 							></textarea>
 						</section>
-						{isBtnDisabled ? (
-							<button type='submit' disabled>
-								Send
-							</button>
+						{isSending ? (
+							<div className='loading'></div>
 						) : (
 							<button type='submit'>Send</button>
 						)}
@@ -168,35 +159,20 @@ const Contact = ({ service_id, template_id, user_id }) => {
 						<Image width={500} height={300} src='/svgs/contact.svg' alt='' />
 					</div>
 				</div>
-				<div className='socials'>
-					<a
-						href='https://twitter.com/Seyi50629405?t=1OeG9ZDJZtzoKeeW2vc4bA&s=09'
-						target='_blank'
-						rel='noreferrer'
-					>
-						<i className='fa-brands fa-twitter'></i>
-					</a>
-					<a
-						href='https://www.linkedin.com/in/seyi-adetuyi-054b56206'
-						target='_blank'
-						rel='noreferrer'
-					>
-						<i className='fa-brands fa-linkedin-in'></i>
-					</a>
-					<a
-						href='https://mail.google.com/mail/?view=cm&fs=1&to=seyispecial17@gmail.com'
-						target='_blank'
-						rel='noreferrer'
-					>
-						<i className='fa-solid fa-envelope-open-text'></i>
-					</a>
-					<a href='http://github.com/Adetuyi' target='_blank' rel='noreferrer'>
-						<i className='fa-brands fa-github'></i>
-					</a>
-				</div>
+				<Socials />
 			</Wrapper>
 		</>
 	);
 };
 
 export default Contact;
+
+export const getStaticProps = () => {
+	const service_id = process.env.SERVICE_ID;
+	const template_id = process.env.TEMPLATE_ID;
+	const user_id = process.env.USER_ID;
+
+	return {
+		props: { service_id, template_id, user_id },
+	};
+};

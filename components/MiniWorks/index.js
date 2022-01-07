@@ -21,6 +21,7 @@ const MiniWorks = () => {
 					<Button text='See More' />
 				</a>
 			</Link>
+			<hr />
 			<div className='cube'>
 				<Cube rotation={rotation} />
 
@@ -31,6 +32,7 @@ const MiniWorks = () => {
 					<i className='fas fa-angle-left'></i>
 				</button>
 			</div>
+			<hr />
 		</Wrapper>
 	);
 };

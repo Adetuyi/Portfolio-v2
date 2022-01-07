@@ -4,6 +4,21 @@ export const Wrapper = styled.article`
 	p {
 		margin: 0 0 1em;
 	}
+	.loading {
+		width: 50px;
+		height: 50px;
+		border-radius: 50%;
+		border: 5px solid #333333;
+		border-top: 5px solid #aaa;
+		margin-left: 4em;
+		animation: rotate 1.8s linear infinite;
+
+		@keyframes rotate {
+			to {
+				transform: rotate(360deg);
+			}
+		}
+	}
 	.group {
 		display: flex;
 
@@ -82,22 +97,6 @@ export const Wrapper = styled.article`
 			}
 		}
 	}
-
-	.socials {
-		margin-top: 2em;
-		text-align: center;
-		padding: 5px 5px 10px;
-		width: 100%;
-		text-align: center;
-
-		a {
-			font-size: 1.3rem;
-			color: #fff;
-			text-decoration: none;
-			padding: 0.3em 0.5em;
-			margin: 0 0.4em;
-		}
-	}
 `;
 
 export const Form = styled.form`
@@ -130,14 +129,15 @@ export const Form = styled.form`
 			border: none;
 			outline: none;
 			width: 100%;
-			padding: 10px 30px;
+			padding: 15px 30px;
 			color: #fff;
 			font-size: 1.2rem;
 			border-bottom: 1px solid transparent;
 			resize: vertical;
 
 			@media (max-width: 425px) {
-				padding: 7px 10px;
+				padding: 7px 20px;
+				font-size: 1.1rem;
 			}
 		}
 		textarea {

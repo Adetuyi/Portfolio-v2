@@ -3,6 +3,7 @@ import { callbackFunc } from '../utils/IntersectionObserver';
 import Navbar from '../components/Navbar';
 import { Wrapper } from '../styles/Skills.styled';
 import Image from 'next/image';
+import Socials from '../components/Socials';
 
 const Skills = () => {
 	const [bars, setBars] = useState([]);
@@ -118,6 +119,7 @@ const Skills = () => {
 					</div>
 				</article>
 			</Wrapper>
+			<Socials />
 		</>
 	);
 };
