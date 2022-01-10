@@ -48,7 +48,7 @@ const Projects = () => {
 									<h2>{work.name}</h2>
 									<p>{work.desc}</p>
 									<Link href={work.link}>
-										<a>
+										<a target='_blank' rel='noreferrer'>
 											<Button text='Visit' active={true} />
 										</a>
 									</Link>

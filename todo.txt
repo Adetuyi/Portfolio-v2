@@ -1,2 +1,3 @@
 bot saying hello
 new logo
+3 cube

@@ -4,7 +4,7 @@ const data = {
 			image: '/imgs/shopify.png',
 			name: 'Shopify',
 			desc: 'An ecommerce site for looking up and buying of goods',
-			link: 'http://shopify-pp.vercel.app/',
+			link: 'https://shopify-pp.vercel.app/',
 			langs: ['NextJs', 'CSS'],
 		},
 		{
