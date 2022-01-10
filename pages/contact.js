@@ -4,6 +4,7 @@ import { Form, Wrapper } from '../styles/Contact.styled';
 import emailjs from 'emailjs-com';
 import Image from 'next/image';
 import Socials from '../components/Socials';
+import Button from '../components/Button';
 
 const Contact = ({ service_id, template_id, user_id }) => {
 	const [name, setName] = useState('');
@@ -146,7 +147,7 @@ const Contact = ({ service_id, template_id, user_id }) => {
 						{isSending ? (
 							<div className='loading'></div>
 						) : (
-							<button type='submit'>Send</button>
+							<Button text='Send' type='submit' />
 						)}
 					</Form>
 					<div className='bot'>

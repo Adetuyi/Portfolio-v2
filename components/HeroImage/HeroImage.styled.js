@@ -51,6 +51,7 @@ export const Wrapper = styled.div`
 			font-size: 3rem;
 			width: max-content;
 			min-height: 1.2em;
+			min-width: 294px;
 		}
 		h2,
 		p {
