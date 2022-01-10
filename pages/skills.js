@@ -106,7 +106,7 @@ const Skills = () => {
 						<p>Next Js</p>
 					</div>
 					<div>
-						<Image width={50} height={50} src='/svgs/php.svg' alt='' />
+						<Image width={40} height={40} src='/svgs/php.svg' alt='' />
 						<p>PHP</p>
 					</div>
 					<div>

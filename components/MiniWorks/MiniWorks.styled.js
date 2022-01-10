@@ -6,7 +6,7 @@ export const Wrapper = styled.article`
 	.cube {
 		position: relative;
 		max-width: 900px;
-		margin: 3em auto 0;
+		margin: 3em auto;
 
 		> button {
 			position: absolute;

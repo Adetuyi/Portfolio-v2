@@ -84,7 +84,7 @@ export const Wrapper = styled.article`
 		}
 
 		@media (max-width: 240px) {
-			grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+			grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
 		}
 	}
 
@@ -98,18 +98,12 @@ export const Wrapper = styled.article`
 		padding-bottom: 1em;
 
 		div {
-			width: 100px;
+			width: 70px;
 			height: 80px;
 			display: flex;
 			justify-content: space-between;
 			flex-direction: column;
 
-			img {
-				width: 50px;
-				height: 50px;
-				display: block;
-				margin: 0 auto;
-			}
 			p {
 				margin: 0;
 			}
