@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useCallback, useEffect, useRef, useState } from 'react';
 import Navbar from '../components/Navbar';
 import { Form, Wrapper } from '../styles/Contact.styled';
 import emailjs from 'emailjs-com';
@@ -17,6 +17,7 @@ const Contact = ({ service_id, template_id, user_id }) => {
 	const [isMsgShowing, setIsMsgShowing] = useState(false);
 	const [isSending, setIsSending] = useState(false);
 	const timeout = useRef();
+	const bot = useRef();
 
 	const sendEmail = () => {
 		emailjs.sendForm(service_id, template_id, form.current, user_id).then(
@@ -53,9 +54,22 @@ const Contact = ({ service_id, template_id, user_id }) => {
 		}, 2000);
 	}
 
-	useEffect(() => {
-		return () => clearTimeout(timeout.current);
+	const sayHello = useCallback((entries, observer) => {
+		entries.forEach(entry => {
+			if (entry.isIntersecting) {
+				setMsg("Hi there, don't hesitate to reach out.");
+				showPopUp();
+				observer.unobserve(entry.target);
+			}
+		});
 	}, []);
+
+	useEffect(() => {
+		const observer = new IntersectionObserver(sayHello, { rootMargin: '0px 0px -200px 0px' });
+		observer.observe(bot.current);
+
+		return () => clearTimeout(timeout.current);
+	}, [sayHello]);
 
 	function submitForm(e) {
 		e.preventDefault();
@@ -82,6 +96,7 @@ const Contact = ({ service_id, template_id, user_id }) => {
 			setIsSending(false);
 		}
 	}
+
 	function clearInputs() {
 		setName('');
 		setEmail('');
@@ -150,7 +165,7 @@ const Contact = ({ service_id, template_id, user_id }) => {
 							<Button text='Send' type='submit' />
 						)}
 					</Form>
-					<div className='bot'>
+					<div className='bot' ref={bot}>
 						<div
 							className={isMsgShowing ? 'feedback active' : 'feedback'}
 							ref={feedback}

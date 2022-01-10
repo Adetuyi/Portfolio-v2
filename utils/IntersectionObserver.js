@@ -1,8 +1,8 @@
-export const callbackFunc = (entries, observerTwo) => {
+export const callbackFunc = (entries, observer) => {
 	entries.forEach(entry => {
 		if (entry.isIntersecting) {
 			entry.target.classList.add('active');
-			observerTwo.unobserve(entry.target);
+			observer.unobserve(entry.target);
 		}
 	});
 };

@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 
 export const Wrapper = styled.section`
-	font-size: 80px;
 	width: clamp(300px, 95%, 800px);
 	height: 600px;
 	position: relative;
@@ -29,5 +28,6 @@ export const Content = styled.div`
 	}
 	a {
 		text-decoration: none !important;
+		display: inline-block;
 	}
 `;

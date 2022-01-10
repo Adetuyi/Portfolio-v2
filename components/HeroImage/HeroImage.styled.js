@@ -71,7 +71,6 @@ export const Wrapper = styled.div`
 		}
 		a {
 			display: inline-block;
-			padding: 0.5em 1em;
 			margin-top: 1.5em;
 			transform: translateY(20px);
 			opacity: 0;

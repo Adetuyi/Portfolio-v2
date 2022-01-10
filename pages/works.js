@@ -27,7 +27,7 @@ const Projects = () => {
 
 										<div className='buttons'>
 											<Link href={work.link}>
-												<a>
+												<a target='_blank' rel='noreferrer'>
 													<Button text='Visit' />
 												</a>
 											</Link>

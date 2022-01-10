@@ -161,14 +161,5 @@ export const Form = styled.form`
 	}
 	button {
 		width: 180px;
-
-		display: block;
-		padding: 0.5em 1em;
-		font-size: 1.3rem;
-		border-radius: 5px;
-		background: var(--secClr);
-		color: #fff;
-		cursor: pointer;
-		border: none;
 	}
 `;
