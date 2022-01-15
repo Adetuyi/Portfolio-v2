@@ -13,7 +13,7 @@ const Contact = ({ service_id, template_id, user_id }) => {
 	const [message, setMessage] = useState('');
 	const form = useRef();
 	const feedback = useRef();
-	const [msg, setMsg] = useState('I see you peeping');
+	const [msg, setMsg] = useState('');
 	const [isMsgShowing, setIsMsgShowing] = useState(false);
 	const [isSending, setIsSending] = useState(false);
 	const timeout = useRef();
@@ -82,7 +82,7 @@ const Contact = ({ service_id, template_id, user_id }) => {
 				}
 				sendEmail();
 			} else {
-				throw new Error('Missing one or more required input fields.');
+				throw new Error('Missing one or more required field.');
 			}
 		} catch (error) {
 			console.log(error.message);

@@ -25,9 +25,6 @@ const Socials = () => {
 				>
 					<i className='fa-solid fa-envelope-open-text'></i>
 				</a>
-				<a href='http://github.com/Adetuyi' target='_blank' rel='noreferrer'>
-					<i className='fa-brands fa-github'></i>
-				</a>
 			</div>
 			<style jsx>{`
 				.socials {

@@ -54,7 +54,7 @@ export const Wrapper = styled.article`
 			transform: translateX(0);
 		}
 		.fbar:before {
-			width: 75%;
+			width: 80%;
 			background: var(--fbarClr);
 		}
 		.bbar:before {

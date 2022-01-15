@@ -4,6 +4,7 @@ import Navbar from '../components/Navbar';
 import { Wrapper } from '../styles/Skills.styled';
 import Image from 'next/image';
 import Socials from '../components/Socials';
+import data from '../utils/data';
 
 const Skills = () => {
 	const [bars, setBars] = useState([]);
@@ -59,64 +60,22 @@ const Skills = () => {
 
 				<h3>Quirks</h3>
 				<div className='quirks'>
-					<div>
-						<label>Responsive Design</label>
-						<span>Creating responsive sites across all screen sizes</span>
-					</div>
-					<div>
-						<label>Problem Solving</label>
-						<span>Solve problems cleanly and efficiently</span>
-					</div>
-					<div>
-						<label>Fast learner</label>
-						<span>
-							Fast rate of learning new skills enabling easier and faster adaptation
-						</span>
-					</div>
-					<div>
-						<label>Versatile</label>
-						<span>High flexibilty and competence</span>
-					</div>
+					{data.skills.quirks.map(quirk => (
+						<div key={quirk.text}>
+							<label>{quirk.text}</label>
+							<span>{quirk.desc}</span>
+						</div>
+					))}
 				</div>
 
 				<h4>Technologies</h4>
 				<article className='technologies'>
-					<div>
-						<Image width={50} height={50} src='/svgs/html5.svg' alt='' />
-						<p>HTML</p>
-					</div>
-					<div>
-						<Image width={50} height={50} src='/svgs/css3.svg' alt='' />
-						<p>CSS</p>
-					</div>
-					<div>
-						<Image width={50} height={50} src='/svgs/bootstrap.svg' alt='' />
-						<p>Bootstrap</p>
-					</div>
-					<div>
-						<Image width={50} height={50} src='/svgs/js.svg' alt='' />
-						<p>Javascript</p>
-					</div>
-					<div>
-						<Image width={50} height={50} src='/svgs/react.svg' alt='' />
-						<p>React</p>
-					</div>
-					<div>
-						<Image width={50} height={50} src='/svgs/next-js.svg' alt='' />
-						<p>Next Js</p>
-					</div>
-					<div>
-						<Image width={40} height={40} src='/svgs/php.svg' alt='' />
-						<p>PHP</p>
-					</div>
-					<div>
-						<Image width={50} height={50} src='/svgs/mysql.svg' alt='' />
-						<p>MySql</p>
-					</div>
-					<div>
-						<Image width={50} height={50} src='/svgs/c.svg' alt='' />
-						<p>C</p>
-					</div>
+					{data.skills.languages.map(lang => (
+						<div key={lang}>
+							<Image width={50} height={50} src={lang.img} alt='' />
+							<p>{lang.text}</p>
+						</div>
+					))}
 				</article>
 			</Wrapper>
 			<Socials />

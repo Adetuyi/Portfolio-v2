@@ -1,4 +1,39 @@
 const data = {
+	skills: {
+		languages: [
+			{
+				img: '/svgs/html5.svg',
+				text: 'HTML',
+			},
+			{ img: '/svgs/css3.svg', text: 'CSS' },
+			{ img: '/svgs/sass.svg', text: 'Sass' },
+			{ img: '/svgs/bootstrap.svg', text: 'Bootstrap' },
+			{ img: '/svgs/js.svg', text: 'Javascript' },
+			{ img: '/svgs/react.svg', text: 'React' },
+			{ img: '/svgs/next-js.svg', text: 'NextJs' },
+			{ img: '/svgs/php.svg', text: 'PHP' },
+			{ img: '/svgs/mysql.svg', text: 'MYSQL' },
+			{ img: '/svgs/c.svg', text: 'C' },
+		],
+		quirks: [
+			{
+				text: 'Responsive Design',
+				desc: 'Creating responsive sites across all screen sizes',
+			},
+			{
+				text: 'Problem Solving',
+				desc: 'Solve problems cleanly and efficiently',
+			},
+			{
+				text: 'Fast learner',
+				desc: 'Fast rate of learning new skills enabling easier and faster adaptation',
+			},
+			{
+				text: 'Versatile',
+				desc: 'High flexibilty and competence',
+			},
+		],
+	},
 	works: [
 		{
 			image: '/imgs/shopify.png',

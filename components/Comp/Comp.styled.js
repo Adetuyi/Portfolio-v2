@@ -10,7 +10,6 @@ export const Wrapper = styled.div`
 	h1 {
 		position: absolute;
 		user-select: none;
-		-webkit-text-stroke: 1px #555;
 		font-weight: 800;
 		z-index: 1;
 		top: 50%;
@@ -23,7 +22,7 @@ export const Wrapper = styled.div`
 		text-transform: uppercase;
 		-webkit-box-reflect: below 1px linear-gradient(transparent, #0008);
 		line-height: 0.7em;
-		animation: lightUp 3.5s 2s linear forwards;
+		animation: lightUp 3.5s 3s linear forwards;
 
 		@media (max-width: 560px) {
 			font-size: 2.2rem;
@@ -62,7 +61,6 @@ export const Wrapper = styled.div`
 		95% {
 			color: #367790;
 			text-shadow: none;
-			-webkit-text-stroke: 1px #555;
 		}
 		6%,
 		26%,
@@ -75,7 +73,6 @@ export const Wrapper = styled.div`
 			text-shadow: 0 0 10px #03bcf4, 0 0 20px #03bcf4, 0 0 40px #03bcf4, 0 0 80px #03bcf4,
 				0 0 160px #03bcf4;
 
-			-webkit-text-stroke: 0px #555;
 			::before {
 				box-shadow: -10px 0 60px #03bcf4, -10px 0 60px #03bcf4, -10px 0 60px #03bcf4,
 					-10px 0 60px #03bcf4;
