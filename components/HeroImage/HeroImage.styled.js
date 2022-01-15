@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Wrapper = styled.div`
-	height: clamp(500px, 90vh, 900px);
+	height: clamp(500px, 85vh, 900px);
 	overflow: hidden;
 	position: relative;
 
