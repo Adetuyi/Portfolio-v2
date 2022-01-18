@@ -23,6 +23,20 @@ export const Wrapper = styled.article`
 		}
 	}
 
+	.resume {
+		margin-top: 1em;
+
+		i {
+			font-size: 2rem;
+			margin-right: 0.2em;
+		}
+		a {
+			display: flex;
+			align-items: center;
+			font-size: 1.3rem;
+		}
+	}
+
 	.skills {
 		flex-basis: 50%;
 

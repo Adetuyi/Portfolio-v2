@@ -48,6 +48,12 @@ const Skills = () => {
 							</a>{' '}
 							for more details or <a href='#contact'>contact me</a>.
 						</p>
+						<p className='resume'>
+							<a href='/files/Resume.pdf' target='_blank' rel='noreferrer'>
+								<i className='far fa-file-pdf'></i>
+								Resume
+							</a>
+						</p>
 					</article>
 					<div className='skills'>
 						<label htmlFor='frontend bar'>Front-end</label>

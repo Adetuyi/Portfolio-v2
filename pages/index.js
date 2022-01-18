@@ -29,7 +29,11 @@ export default function Home({ service_id, template_id, user_id }) {
 						<Link href='/works'>my works</Link>.
 					</p>
 					<p>
-						Here is my <a href='/files/Resume.pdf'>Resume</a>.
+						Here is my{' '}
+						<a href='/files/Resume.pdf' target='_blank' rel='noreferrer'>
+							resume
+						</a>
+						.
 					</p>
 					<p>
 						Wanna talk ? You can email me at{' '}
