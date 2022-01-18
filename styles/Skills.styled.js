@@ -95,6 +95,9 @@ export const Wrapper = styled.article`
 				font-weight: 400;
 				margin-bottom: 0.2em;
 			}
+			span {
+				line-height: 1.4;
+			}
 		}
 
 		@media (max-width: 240px) {
@@ -107,23 +110,24 @@ export const Wrapper = styled.article`
 		justify-content: center;
 		align-items: center;
 		flex-wrap: wrap;
-		gap: 2rem 3rem;
+		gap: 1.5rem 2rem;
 		text-align: center;
 		padding-bottom: 1em;
 
 		div {
 			width: 70px;
-			height: 80px;
+			height: 70px;
 			display: flex;
 			justify-content: space-between;
 			flex-direction: column;
 
 			p {
 				margin: 0;
+				font-size: 1rem;
 			}
 		}
 
-		@media (max-width: 425px) {
+		@media (max-width: 475px) {
 			gap: 1em 0;
 			justify-content: space-around;
 		}

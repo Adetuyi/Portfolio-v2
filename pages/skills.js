@@ -78,7 +78,7 @@ const Skills = () => {
 				<article className='technologies'>
 					{data.skills.languages.map(lang => (
 						<div key={lang}>
-							<Image width={50} height={50} src={lang.img} alt='' />
+							<Image width={40} height={40} src={lang.img} alt='' />
 							<p>{lang.text}</p>
 						</div>
 					))}
