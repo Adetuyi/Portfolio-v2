@@ -8,6 +8,8 @@ const data = {
 			{ img: '/svgs/css3.svg', text: 'CSS' },
 			{ img: '/svgs/sass.svg', text: 'Sass' },
 			{ img: '/svgs/bootstrap.svg', text: 'Bootstrap' },
+			{ img: '/svgs/tailwind.svg', text: 'Tailwind' },
+
 			{ img: '/svgs/js.svg', text: 'Javascript' },
 			{ img: '/svgs/react.svg', text: 'React' },
 			{ img: '/svgs/next-js.svg', text: 'NextJs' },
