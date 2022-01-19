@@ -161,5 +161,6 @@ export const Form = styled.form`
 	}
 	button {
 		width: 180px;
+		margin-top: 1em;
 	}
 `;
