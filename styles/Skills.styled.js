@@ -110,7 +110,7 @@ export const Wrapper = styled.article`
 		justify-content: center;
 		align-items: center;
 		flex-wrap: wrap;
-		gap: 1.5rem 2rem;
+		gap: 1.5rem 1rem;
 		text-align: center;
 		padding-bottom: 1em;
 
