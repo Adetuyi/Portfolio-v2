@@ -11,10 +11,10 @@ export const Wrapper = styled.article`
 		> button {
 			position: absolute;
 			top: 50%;
-			transform: translateY(calc(-50% - 70px));
+			transform: translateY(calc(-50% - 110px));
 			font-size: 2rem;
 			padding: 0 0.3em;
-			background: rgb(0 0 0 / 0.3);
+			background: rgb(0 0 0 / 0.6);
 			border-radius: 5px;
 			color: #fff;
 			border: 0;

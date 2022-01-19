@@ -20,6 +20,7 @@ body {
 	background-color: var(--bgClr);
 	color: #fafafa;
 	padding: 3rem 1rem 1rem;
+	min-width: 270px;
 }
 html {
 	scroll-behavior: smooth;
@@ -60,7 +61,7 @@ article p {
 	font-size: 1.3rem;
 	font-weight: 300;
 	line-height: 1.4;
-	margin-bottom: 0.4em;
+	margin-bottom: 1em;
 }
 a {
 	text-decoration: none;
@@ -79,13 +80,13 @@ article a:hover {
 }
 @media (max-width: 425px) {
 	h1 {
-		font-size: 2.5rem;
+		font-size: 3rem;
 	}
 	article {
 		padding: 0;
 	}
 	article h2 {
-		font-size: 2rem;
+		font-size: 2.5rem;
 	}
 }
 @media (max-width: 768px) {

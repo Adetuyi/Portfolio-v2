@@ -26,6 +26,9 @@ export const Wrapper = styled.article`
 		.scene:hover > article {
 			transform: rotateY(-180deg);
 		}
+		.langs {
+			bottom: 8px;
+		}
 	}
 `;
 
@@ -91,6 +94,11 @@ export const Card = styled.article`
 			margin: 0em 0 1em;
 			color: #1f1f1f;
 			font-size: 1.1rem;
+		}
+		.langs {
+			color: #1f1f1f;
+			position: absolute;
+			bottom: 55px;
 		}
 
 		.flipBtn {

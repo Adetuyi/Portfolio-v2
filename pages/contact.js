@@ -51,7 +51,7 @@ const Contact = ({ service_id, template_id, user_id }) => {
 
 		timeout.current = setTimeout(() => {
 			setIsMsgShowing(false);
-		}, 2000);
+		}, 3500);
 	}
 
 	const sayHello = useCallback((entries, observer) => {
@@ -65,7 +65,7 @@ const Contact = ({ service_id, template_id, user_id }) => {
 	}, []);
 
 	useEffect(() => {
-		const observer = new IntersectionObserver(sayHello, { rootMargin: '0px 0px -200px 0px' });
+		const observer = new IntersectionObserver(sayHello, { rootMargin: '0px 0px -100px 0px' });
 		observer.observe(bot.current);
 
 		return () => clearTimeout(timeout.current);

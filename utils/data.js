@@ -73,6 +73,13 @@ const data = {
 			link: 'https://adetuyi.github.io/Rock-paper-scissors-fmc/',
 			langs: ['HTML', 'CSS', 'Javascript'],
 		},
+		{
+			image: '/imgs/pcomponent.png',
+			name: 'Pricing Component',
+			desc: 'Select a plan to subscribe for. Interactive slider',
+			link: 'https://adetuyi.github.io/Rock-paper-scissors-fmc/',
+			langs: ['HTML', 'CSS', 'Tailwind', 'Javascript'],
+		},
 	],
 };
 export default data;

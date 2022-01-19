@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Wrapper = styled.section`
-	width: clamp(300px, 95%, 800px);
+	width: clamp(270px, 90%, 800px);
 	height: 600px;
 	position: relative;
 	transform-style: preserve-3d;

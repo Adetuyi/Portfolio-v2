@@ -52,6 +52,15 @@ const Projects = () => {
 											<Button text='Visit' active={true} />
 										</a>
 									</Link>
+									<div className='langs'>
+										{work.langs.map((lang, index) => {
+											if (index === work.langs.length - 1) {
+												return lang;
+											} else {
+												return lang + ', ';
+											}
+										})}
+									</div>
 									<button
 										onClick={e => {
 											e.target.parentElement.parentElement.classList.toggle(
