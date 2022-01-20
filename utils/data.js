@@ -67,6 +67,13 @@ const data = {
 			langs: ['HTML', 'CSS'],
 		},
 		{
+			image: '/imgs/qApp2.png',
+			name: 'Quiz App',
+			desc: 'An interactive, timed JavaScript quiz that stores a high score leaderboard in local storage',
+			link: 'https://adetuyi.github.io/quiz-app/',
+			langs: ['HTML', 'CSS', 'Tailwind', 'Javascript'],
+		},
+		{
 			image: '/imgs/rps.png',
 			name: 'Rock Paper Scissors',
 			desc: 'Play a game of rock paper scissors',
@@ -76,8 +83,8 @@ const data = {
 		{
 			image: '/imgs/pcomponent.png',
 			name: 'Pricing Component',
-			desc: 'Select a plan to subscribe for. Interactive slider',
-			link: 'https://adetuyi.github.io/Rock-paper-scissors-fmc/',
+			desc: 'Choose your subscription plan',
+			link: 'https://adetuyi.github.io/pricing-component',
 			langs: ['HTML', 'CSS', 'Tailwind', 'Javascript'],
 		},
 	],
