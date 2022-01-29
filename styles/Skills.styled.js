@@ -3,6 +3,10 @@ import styled from 'styled-components';
 export const Wrapper = styled.article`
 	padding: 0 1em;
 
+	h2 {
+		margin-bottom: 0;
+	}
+
 	.quirks {
 		display: grid;
 		grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
