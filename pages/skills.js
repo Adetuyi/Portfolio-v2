@@ -13,7 +13,7 @@ const Skills = () => {
 			<Wrapper id='skills'>
 				<h2>Skills</h2>
 
-				<h3>Quirks</h3>
+				<h3 className='quirk-header'>Quirks</h3>
 				<div className='quirks'>
 					{data.skills.quirks.map(quirk => (
 						<div key={quirk.text}>

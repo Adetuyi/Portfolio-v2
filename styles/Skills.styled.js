@@ -7,6 +7,10 @@ export const Wrapper = styled.article`
 		margin-bottom: 0;
 	}
 
+	.quirk-header {
+		margin-top: 0;
+	}
+
 	.quirks {
 		display: grid;
 		grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
