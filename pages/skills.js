@@ -7,22 +7,6 @@ import Socials from '../components/Socials';
 import data from '../utils/data';
 
 const Skills = () => {
-	const [bars, setBars] = useState([]);
-	useEffect(() => setBars(document.querySelectorAll('.bar')), []);
-
-	useEffect(() => {
-		//Bar Observer
-		const observer = new IntersectionObserver(callbackFunc, {
-			threshold: 1,
-			rootMargin: '0px 0px -300px 0px',
-		});
-
-		if (bars.length > 0) {
-			bars.forEach(bar => observer.observe(bar));
-		}
-
-		return () => bars.forEach(bar => observer.unobserve(bar));
-	}, [bars]);
 	return (
 		<>
 			<Navbar />
