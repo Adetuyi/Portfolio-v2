@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import { callbackFunc } from '../utils/IntersectionObserver';
 import Navbar from '../components/Navbar';
 import { Wrapper } from '../styles/Skills.styled';
 import Image from 'next/image';
