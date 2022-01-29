@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 export const Wrapper = styled.article`
 	padding: 0 1em;
+	min-height: calc(100vh - 3rem);
 
 	.quirk-header {
 		margin-top: 0;
