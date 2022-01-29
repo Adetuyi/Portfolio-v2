@@ -7,7 +7,6 @@ export const Wrapper = styled.div`
 
 	.parallax {
 		position: absolute;
-		display: none;
 		width: 100%;
 		height: 100%;
 	}
@@ -272,11 +271,6 @@ export const Wrapper = styled.div`
 		}
 		section p {
 			font-size: 1.7rem;
-		}
-	}
-	@media (hover: hover) {
-		.parallax {
-			display: block;
 		}
 	}
 `;
