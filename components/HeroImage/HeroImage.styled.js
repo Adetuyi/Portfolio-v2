@@ -273,4 +273,9 @@ export const Wrapper = styled.div`
 			font-size: 1.7rem;
 		}
 	}
+	@media (hover: hover) {
+		.parallax img {
+			transition: 0.3s;
+		}
+	}
 `;
