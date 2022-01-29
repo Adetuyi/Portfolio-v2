@@ -3,10 +3,6 @@ import styled from 'styled-components';
 export const Wrapper = styled.article`
 	padding: 0 1em;
 
-	h2 {
-		margin-bottom: 0;
-	}
-
 	.quirk-header {
 		margin-top: 0;
 	}
