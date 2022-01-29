@@ -273,7 +273,7 @@ export const Wrapper = styled.div`
 			font-size: 1.7rem;
 		}
 	}
-	@media (hover: hover) {
+	@media (hover: none) {
 		.parallax img {
 			transition: 0.3s;
 		}
