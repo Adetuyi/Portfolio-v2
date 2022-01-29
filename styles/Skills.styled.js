@@ -38,12 +38,12 @@ export const Wrapper = styled.article`
 
 	.technologies {
 		display: flex;
-		justify-content: center;
 		align-items: center;
+		justify-content: center;
 		flex-wrap: wrap;
-		gap: 1.5rem 1rem;
+		gap: 1.5rem 3rem;
 		text-align: center;
-		padding-bottom: 1em;
+		padding: 1em;
 
 		div {
 			width: 70px;
@@ -58,9 +58,12 @@ export const Wrapper = styled.article`
 			}
 		}
 
-		@media (max-width: 475px) {
-			gap: 1em 0;
-			justify-content: space-around;
+		@media (max-width: 800px) {
+			gap: 1.5em 2em;
+		}
+		@media (max-width: 500px) {
+			gap: 1.5em;
+			justify-content: space-evenly;
 		}
 	}
 `;
