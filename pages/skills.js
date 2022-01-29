@@ -27,42 +27,7 @@ const Skills = () => {
 		<>
 			<Navbar />
 			<Wrapper id='skills'>
-				<section>
-					<article>
-						<h2>Skills</h2>
-						<p>
-							I create successful responsive websites that are fast, easy to use, and
-							built with best practices. The main area of my expertise is front-end
-							development, HTML, CSS, JS, building small and medium web apps,
-							animations, and interactive layouts.
-						</p>
-						<p>
-							I also have back-end developer experience with PHP, MySql and C. Visit
-							my{' '}
-							<a
-								href='https://www.linkedin.com/in/seyi-adetuyi-054b56206/'
-								target='_blank'
-								rel='noreferrer'
-							>
-								LinkedIn profile
-							</a>{' '}
-							for more details or <a href='#contact'>contact me</a>.
-						</p>
-						<p className='resume'>
-							<a href='/files/Resume.pdf' target='_blank' rel='noreferrer'>
-								<i className='far fa-file-pdf'></i>
-								Resume
-							</a>
-						</p>
-					</article>
-					<div className='skills'>
-						<label htmlFor='frontend bar'>Front-end</label>
-						<div className='fbar bar'></div>
-
-						<label htmlFor='backend bar'>Back-end</label>
-						<div className='bbar bar'></div>
-					</div>
-				</section>
+				<h2>Skills</h2>
 
 				<h3>Quirks</h3>
 				<div className='quirks'>

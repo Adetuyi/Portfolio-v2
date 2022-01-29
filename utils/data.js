@@ -13,9 +13,6 @@ const data = {
 			{ img: '/svgs/js.svg', text: 'Javascript' },
 			{ img: '/svgs/react.svg', text: 'React' },
 			{ img: '/svgs/next-js.svg', text: 'NextJs' },
-			{ img: '/svgs/php.svg', text: 'PHP' },
-			{ img: '/svgs/mysql.svg', text: 'MYSQL' },
-			{ img: '/svgs/c.svg', text: 'C' },
 		],
 		quirks: [
 			{
@@ -52,7 +49,7 @@ const data = {
 			langs: ['React', 'CSS'],
 		},
 
-		{
+		/*{
 			image: '/imgs/clipboard.png',
 			name: 'Clipboard',
 			desc: 'A landing page of a clipboard app',
@@ -65,7 +62,7 @@ const data = {
 			desc: 'A landing page of a monitor riser',
 			link: 'https://adetuyi.github.io/Crowdfunding-fmc/',
 			langs: ['HTML', 'CSS'],
-		},
+		},*/
 		{
 			image: '/imgs/qApp2.png',
 			name: 'Quiz App',
@@ -80,13 +77,13 @@ const data = {
 			link: 'https://adetuyi.github.io/Rock-paper-scissors-fmc/',
 			langs: ['HTML', 'CSS', 'Javascript'],
 		},
-		{
+		/*{
 			image: '/imgs/pcomponent.png',
 			name: 'Pricing Component',
 			desc: 'Choose your subscription plan',
 			link: 'https://adetuyi.github.io/pricing-component',
 			langs: ['HTML', 'CSS', 'Tailwind', 'Javascript'],
-		},
+		},*/
 	],
 };
 export default data;
