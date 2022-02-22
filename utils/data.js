@@ -12,7 +12,9 @@ const data = {
 
 			{ img: '/svgs/js.svg', text: 'Javascript' },
 			{ img: '/svgs/react.svg', text: 'React' },
-			{ img: '/svgs/next-js.svg', text: 'NextJs' },
+			{ img: '/svgs/next-js.svg', text: 'Next' },
+			{ img: '/svgs/ts.svg', text: 'Typescript' },
+			{ img: '/svgs/redux.svg', text: 'Redux' },
 		],
 		quirks: [
 			{
@@ -48,21 +50,20 @@ const data = {
 			link: 'https://movies-app-pp.netlify.app/',
 			langs: ['React', 'CSS'],
 		},
-
-		/*{
+		{
+			image: '/imgs/rps.png',
+			name: 'Rock Paper Scissors',
+			desc: 'Play a game of rock paper scissors',
+			link: 'https://adetuyi.github.io/Rock-paper-scissors-fmc/',
+			langs: ['HTML', 'CSS', 'Javascript'],
+		},
+		{
 			image: '/imgs/clipboard.png',
 			name: 'Clipboard',
 			desc: 'A landing page of a clipboard app',
 			link: 'https://adetuyi.github.io/Clipboard-landing-fmc/',
 			langs: ['HTML', 'CSS'],
 		},
-		{
-			image: '/imgs/crowdfunding.png',
-			name: 'Crowdfunding',
-			desc: 'A landing page of a monitor riser',
-			link: 'https://adetuyi.github.io/Crowdfunding-fmc/',
-			langs: ['HTML', 'CSS'],
-		},*/
 		{
 			image: '/imgs/qApp2.png',
 			name: 'Quiz App',
@@ -71,18 +72,26 @@ const data = {
 			langs: ['HTML', 'CSS', 'Tailwind', 'Javascript'],
 		},
 		{
-			image: '/imgs/rps.png',
-			name: 'Rock Paper Scissors',
-			desc: 'Play a game of rock paper scissors',
-			link: 'https://adetuyi.github.io/Rock-paper-scissors-fmc/',
-			langs: ['HTML', 'CSS', 'Javascript'],
-		},
-		/*{
 			image: '/imgs/pcomponent.png',
 			name: 'Pricing Component',
-			desc: 'Choose your subscription plan',
+			desc: 'Choose your subscription plan with an interactive slider',
 			link: 'https://adetuyi.github.io/pricing-component',
 			langs: ['HTML', 'CSS', 'Tailwind', 'Javascript'],
+		},
+		{
+			image: '/imgs/tip.png',
+			name: 'Tip Calculator',
+			desc: 'Calculate how much tip an individual gets for a given sum',
+			link: 'https://adetuyi.github.io/Tip-calculator-fmc/',
+			langs: ['HTML', 'CSS', 'Javascript'],
+		},
+
+		/*{
+			image: '/imgs/crowdfunding.png',
+			name: 'Crowdfunding',
+			desc: 'A landing page of a monitor riser',
+			link: 'https://adetuyi.github.io/Crowdfunding-fmc/',
+			langs: ['HTML', 'CSS'],
 		},*/
 	],
 };
