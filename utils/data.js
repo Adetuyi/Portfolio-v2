@@ -1,6 +1,6 @@
 const data = {
 	skills: {
-		languages: [
+		technologies: [
 			{
 				img: '/svgs/html5.svg',
 				text: 'HTML',
@@ -13,6 +13,8 @@ const data = {
 			{ img: '/svgs/js.svg', text: 'Javascript' },
 			{ img: '/svgs/react.svg', text: 'React' },
 			{ img: '/svgs/next-js.svg', text: 'Next' },
+			{ img: '/svgs/node.svg', text: 'Node' },
+			{ img: '/svgs/express.svg', text: 'Express' },
 			{ img: '/svgs/ts.svg', text: 'Typescript' },
 			{ img: '/svgs/redux.svg', text: 'Redux' },
 		],
@@ -44,7 +46,16 @@ const data = {
 			langs: ['NextJs', 'CSS'],
 		},
 		{
+			image: '/imgs/inv.png',
+			mImage: '/imgs/minv.png',
+			name: 'Invoice App',
+			desc: "Create an invoice with a set time to pay. Dont't forget to mark as paid once you pay",
+			link: 'https://invoice-app-pp.herokuapp.com/',
+			langs: ['Node', 'Express', 'HTML', 'CSS'],
+		},
+		{
 			image: '/imgs/tmdb.png',
+			mImage: '/imgs/mtmdb.png',
 			name: 'The Movie DB',
 			desc: 'A site for getting infomation on movies',
 			link: 'https://movies-app-pp.netlify.app/',

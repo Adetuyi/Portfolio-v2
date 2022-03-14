@@ -16,14 +16,14 @@ const about = () => {
 					<article>
 						<h2>Me, Myself & I</h2>
 						<p>
-							My name is Seyi Adetuyi, I am a front-end developer based in Lagos. I
-							have a passion for UI effects, animations, design patterns and
+							My fullname is Oluwaseyi Adetuyi, I am a front-end developer based in
+							Lagos. I have a passion for UI effects, animations, design patterns and
 							thoughtful interactions.
 						</p>
 
 						<p>
-							I love what I do. Im versatile, learn fast and work faster. I enjoy
-							learning new technologies and solving challenging problems.
+							I love what I do. I&#39;m very versatile, I learn fast and work faster.
+							I enjoy learning new technologies and solving challenging problems.
 						</p>
 						<p>
 							I am a well-organised individual, problem solver with high attention to

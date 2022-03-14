@@ -41,7 +41,7 @@ export const Wrapper = styled.article`
 				padding: 1em;
 				font-size: 1.2rem;
 				border-radius: 10px;
-				background: #000;
+				background: #151516;
 				font-weight: 300;
 
 				::before,
@@ -52,7 +52,7 @@ export const Wrapper = styled.article`
 					left: 20%;
 					transform: translateX(-50%);
 					border: 25px solid var(--bgClr);
-					border-top: 25px solid black;
+					border-top: 25px solid #151516;
 				}
 				::after {
 					left: 13%;
@@ -125,7 +125,8 @@ export const Form = styled.form`
 
 		input,
 		textarea {
-			background-color: #2b2b2b;
+			background-color: #2c2e2e;
+			border-radius: 4px;
 			border: none;
 			outline: none;
 			width: 100%;
@@ -136,7 +137,7 @@ export const Form = styled.form`
 			resize: vertical;
 
 			@media (max-width: 425px) {
-				padding: 7px 20px;
+				padding: 13px 20px;
 				font-size: 1.1rem;
 			}
 		}
@@ -162,5 +163,10 @@ export const Form = styled.form`
 	button {
 		width: 180px;
 		margin-top: 1em;
+	}
+
+	@media (max-width: 425px) {
+		display: flex;
+		flex-direction: column;
 	}
 `;

@@ -4,8 +4,12 @@ export const Wrapper = styled.article`
 	padding: 0 1em;
 	min-height: calc(100vh - 8.5rem);
 
-	.quirk-header {
-		margin-top: 0;
+	h2 {
+		margin-bottom: 0.9rem;
+	}
+	h3 {
+		margin: 1.2em 0 0.5em;
+		font-size: 1.8rem;
 	}
 
 	.quirks {
@@ -64,6 +68,15 @@ export const Wrapper = styled.article`
 		@media (max-width: 500px) {
 			gap: 1.5em;
 			justify-content: space-evenly;
+		}
+	}
+	@media (max-width: 425px) {
+		&,
+		.technologies {
+			padding: 0;
+		}
+		.technologies {
+			gap: 1rem 0.8rem;
 		}
 	}
 `;

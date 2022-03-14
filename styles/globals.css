@@ -8,8 +8,9 @@
 	font-family: 'Roboto Condensed', sans-serif;
 }
 :root {
-	--bgClr: #1d1d1d;
-	--cubeBgClr: #202020;
+	--bg: #1f2020;
+	--bgClr: #252727;
+	--cubeBgClr: #212222;
 	--mainClr: #07252d;
 	--secClr: #1e8ba8;
 	--terClr: #08fdd8;
@@ -80,13 +81,16 @@ article a:hover {
 }
 @media (max-width: 425px) {
 	h1 {
-		font-size: 3rem;
+		font-size: 2.7rem;
+	}
+	h2 {
+		font-size: 2.7rem;
 	}
 	article {
 		padding: 0;
 	}
 	article h2 {
-		font-size: 2.5rem;
+		font-size: 2.7rem;
 	}
 }
 @media (max-width: 768px) {
@@ -99,7 +103,7 @@ article a:hover {
 		font-size: 3.5rem;
 	}
 	h2 {
-		font-size: 3.5rem;
+		font-size: 3.2rem;
 	}
 	h3 {
 		font-size: 2.5rem;

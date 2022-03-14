@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 export const Wrapper = styled.article`
 	perspective: 10000px;
+	/* perspective-origin: 50% 0%; */
 
 	.cube {
 		position: relative;
@@ -13,7 +14,7 @@ export const Wrapper = styled.article`
 			top: 50%;
 			transform: translateY(calc(-50% - 110px));
 			font-size: 2rem;
-			padding: 0 0.3em;
+			padding: 0.3em 0.32em;
 			background: rgb(0 0 0 / 0.6);
 			border-radius: 5px;
 			color: #fff;

@@ -15,12 +15,12 @@ const Projects = () => {
 				<h1>Works</h1>
 				<br />
 				<div className='worksCon'>
-					{data.works.map(work => (
+					{data.works.map((work) => (
 						<div className='scene' key={work.name}>
 							<Card>
 								<div
 									className='front'
-									style={{ backgroundImage: `url(${work.image})` }}
+									style={{ backgroundImage: `url(${work.mImage || work.image})` }}
 								>
 									<div className='bottom'>
 										<h2>{work.name}</h2>
@@ -32,7 +32,7 @@ const Projects = () => {
 												</a>
 											</Link>
 											<button
-												onClick={e => {
+												onClick={(e) => {
 													e.target.parentElement.parentElement.parentElement.parentElement.classList.toggle(
 														'flipped'
 													);
@@ -62,7 +62,7 @@ const Projects = () => {
 										})}
 									</div>
 									<button
-										onClick={e => {
+										onClick={(e) => {
 											e.target.parentElement.parentElement.classList.toggle(
 												'flipped'
 											);

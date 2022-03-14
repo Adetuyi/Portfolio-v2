@@ -32,7 +32,7 @@ export const Wrapper = styled.header`
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		padding: 0 2em;
+		padding: 1.6rem 2em;
 		position: relative;
 		height: 43px;
 
@@ -47,9 +47,8 @@ export const Wrapper = styled.header`
 
 		header {
 			display: none;
-			background: #0009;
-			padding: 0 1em 1em;
-			margin-bottom: 2em;
+			background: #1f2020;
+			padding: 0 1em 2em;
 
 			svg {
 				width: 70px;
@@ -112,7 +111,7 @@ export const Wrapper = styled.header`
 
 	@media (max-width: 768px) {
 		nav {
-			padding: 0 1em;
+			padding: 1.6rem 1em;
 
 			header {
 				display: block;
@@ -134,22 +133,27 @@ export const Wrapper = styled.header`
 			background: var(--bgClr);
 			position: fixed;
 			z-index: 10;
-			top: 43px;
+			top: 51px;
 			left: 0;
+			opacity: 1;
+			visibility: visible;
 			width: 100%;
 			min-height: fit-content;
 			height: calc(100% - 43px);
 			overflow-y: auto;
+			transition: all 0.5s;
 		}
 		section.inactive {
-			display: none;
+			left: 40%;
+			opacity: 0;
+			visibility: hidden;
 		}
 		section > a {
 			:not(:nth-child(1)) {
 				display: block;
 				border-top: 1px solid #ccc2;
 				text-align: center;
-				line-height: 1.8em;
+				line-height: 2.3em;
 			}
 			:nth-child(6) {
 				border-bottom: 1px solid #ccc2;

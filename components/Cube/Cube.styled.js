@@ -12,13 +12,18 @@ export const Section = styled.section`
 	width: 100%;
 	height: 100%;
 	position: absolute;
-	background: var(--bgClr);
+	background: var(--cubeBgClr);
+	border-radius: 0 0 12px 12px;
 `;
 
 export const Content = styled.div`
 	img {
 		object-fit: cover;
 		object-position: center;
+	}
+	article {
+		height: 100%;
+		padding-left: 2rem;
 	}
 	h4 {
 		margin: 0.5em 0 1em;
@@ -29,5 +34,13 @@ export const Content = styled.div`
 	a {
 		text-decoration: none !important;
 		display: inline-block;
+		position: absolute;
+		bottom: 25px;
+	}
+
+	@media (max-width: 425px) {
+		article {
+			padding-left: 1rem;
+		}
 	}
 `;

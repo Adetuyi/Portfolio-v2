@@ -4,12 +4,8 @@ const Socials = () => {
 	return (
 		<>
 			<div className='socials'>
-				<a
-					href='https://twitter.com/Seyi50629405?t=1OeG9ZDJZtzoKeeW2vc4bA&s=09'
-					target='_blank'
-					rel='noreferrer'
-				>
-					<i className='fa-brands fa-twitter'></i>
+				<a href='https://github.com/Adetuyi' target='_blank' rel='noreferrer'>
+					<i className='fa-brands fa-github'></i>
 				</a>
 				<a
 					href='https://www.linkedin.com/in/seyi-adetuyi-054b56206'
@@ -24,6 +20,9 @@ const Socials = () => {
 					rel='noreferrer'
 				>
 					<i className='fa-solid fa-envelope-open-text'></i>
+				</a>
+				<a href='https://wa.me/2349017299030' target='_blank' rel='noreferrer'>
+					<i className='fa-brands fa-whatsapp'></i>
 				</a>
 			</div>
 			<style jsx>{`

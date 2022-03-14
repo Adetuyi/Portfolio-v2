@@ -54,7 +54,7 @@ const Window = ({ rotation }) => {
 			tallest = rHght;
 		}
 
-		cube.current.style.height = `${tallest + 48}px`;
+		cube.current.style.height = `${tallest + 80}px`;
 	}
 
 	return (
@@ -67,23 +67,24 @@ const Window = ({ rotation }) => {
 						<Section ref={refs[index]} key={index}>
 							<Content>
 								<Image width={800} height={400} src={work.image} alt='' />
+								<article>
+									<h4>{work.name}</h4>
 
-								<h4>{work.name}</h4>
-
-								<p>{work.desc}</p>
-								<p>
-									Built with:&nbsp;{' '}
-									{work.langs.map((lang, index) => {
-										if (index === work.langs.length - 1) {
-											return lang;
-										} else {
-											return lang + ', ';
-										}
-									})}
-								</p>
-								<a href={work.link} target='_blank' rel='noreferrer'>
-									<Button text='Visit' />
-								</a>
+									<p>{work.desc}</p>
+									<p>
+										Built with:&nbsp;{' '}
+										{work.langs.map((lang, index) => {
+											if (index === work.langs.length - 1) {
+												return lang;
+											} else {
+												return lang + ', ';
+											}
+										})}
+									</p>
+									<a href={work.link} target='_blank' rel='noreferrer'>
+										<Button text='Visit' />
+									</a>
+								</article>
 							</Content>
 						</Section>
 					);

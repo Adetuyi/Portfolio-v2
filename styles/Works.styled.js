@@ -4,7 +4,7 @@ export const Wrapper = styled.article`
 	.worksCon {
 		display: grid;
 		grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
-		gap: 2em;
+		gap: 2em 1em;
 	}
 
 	.scene {
@@ -18,6 +18,11 @@ export const Wrapper = styled.article`
 		}
 	}
 
+	@media (max-width: 425px) {
+		.worksCon {
+			grid-template-columns: 1fr;
+		}
+	}
 	@media (hover: hover) {
 		.buttons,
 		.flipBtn {
@@ -35,7 +40,7 @@ export const Wrapper = styled.article`
 export const Card = styled.article`
 	position: relative;
 	width: 100%;
-	height: 480px;
+	height: 440px;
 	transform-style: preserve-3d;
 	transition: 1s;
 
@@ -88,12 +93,14 @@ export const Card = styled.article`
 
 		h2 {
 			font-size: 2rem;
+			margin-bottom: 1rem;
 			color: #1f1f1f;
 		}
 		p {
 			margin: 0em 0 1em;
 			color: #1f1f1f;
 			font-size: 1.1rem;
+			font-weight: 400;
 		}
 		.langs {
 			color: #1f1f1f;
@@ -123,5 +130,8 @@ export const Card = styled.article`
 	}
 	a {
 		text-decoration: none !important;
+	}
+	@media (max-width: 425px) {
+		height: 400px;
 	}
 `;

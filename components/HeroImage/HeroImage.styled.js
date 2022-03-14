@@ -59,21 +59,22 @@ export const Wrapper = styled.div`
 			}
 		}
 		.greetings::before {
-			animation: typeGreetings 1.5s 0.5s linear forwards;
+			animation: typeGreetings 1.2s 0.5s linear forwards;
 		}
 
 		.intro::before {
-			animation: typeIntro 3s 2.5s linear forwards;
+			animation: typeIntro 2.2s 2s linear forwards;
 		}
 		.profession::before {
-			animation: typeProfession 2s 6s linear forwards;
+			animation: typeProfession 1.2s 4.5s linear forwards;
 		}
 		a {
 			display: inline-block;
 			margin-top: 1.5em;
 			transform: translateY(20px);
 			opacity: 0;
-			animation: fadeInUp 0.8s 8s linear forwards;
+			visibility: hidden;
+			animation: fadeInUp 0.8s 5.3s linear forwards;
 		}
 	}
 
@@ -87,10 +88,11 @@ export const Wrapper = styled.div`
 		font-size: 1.1rem;
 		transition: 0.5s;
 		opacity: 0;
-		animation: fadeInUp 0.8s 8s linear forwards;
+		animation: fadeInUp 0.8s 6s linear forwards;
 	}
 	@keyframes fadeInUp {
 		to {
+			visibility: visible;
 			opacity: 1;
 			transform: translateY(0);
 		}

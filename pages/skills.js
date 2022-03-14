@@ -11,10 +11,8 @@ const Skills = () => {
 			<Navbar />
 			<Wrapper id='skills'>
 				<h2>Skills</h2>
-
-				<h3 className='quirk-header'>Quirks</h3>
 				<div className='quirks'>
-					{data.skills.quirks.map(quirk => (
+					{data.skills.quirks.map((quirk) => (
 						<div key={quirk.text}>
 							<label>{quirk.text}</label>
 							<span>{quirk.desc}</span>
@@ -22,12 +20,12 @@ const Skills = () => {
 					))}
 				</div>
 
-				<h4>Technologies</h4>
+				<h3>Technologies</h3>
 				<article className='technologies'>
-					{data.skills.languages.map(lang => (
-						<div key={lang}>
-							<Image width={40} height={40} src={lang.img} alt='' />
-							<p>{lang.text}</p>
+					{data.skills.technologies.map((tech) => (
+						<div key={tech.text}>
+							<Image width={40} height={40} src={tech.img} alt='' />
+							<p>{tech.text}</p>
 						</div>
 					))}
 				</article>
