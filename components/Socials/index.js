@@ -7,11 +7,7 @@ const Socials = () => {
 				<a href='https://github.com/Adetuyi' target='_blank' rel='noreferrer'>
 					<i className='fa-brands fa-github'></i>
 				</a>
-				<a
-					href='https://www.linkedin.com/in/seyi-adetuyi-054b56206'
-					target='_blank'
-					rel='noreferrer'
-				>
+				<a href='https://www.linkedin.com/in/seyi-adet' target='_blank' rel='noreferrer'>
 					<i className='fa-brands fa-linkedin-in'></i>
 				</a>
 				<a
