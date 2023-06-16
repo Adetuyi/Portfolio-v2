@@ -3,23 +3,23 @@ import React from 'react';
 const Socials = () => {
 	return (
 		<>
-			<div className='socials'>
-				<a href='https://github.com/Adetuyi' target='_blank' rel='noreferrer'>
-					<i className='fa-brands fa-github'></i>
+			<div className="socials">
+				<a href="https://github.com/Adetuyi" target="_blank" rel="noreferrer">
+					<i className="fa-brands fa-github"></i>
 				</a>
-				<a href='https://www.linkedin.com/in/seyi-adet' target='_blank' rel='noreferrer'>
-					<i className='fa-brands fa-linkedin-in'></i>
+				<a href="https://www.linkedin.com/in/seyi-adet" target="_blank" rel="noreferrer">
+					<i className="fa-brands fa-linkedin-in"></i>
 				</a>
-				<a
-					href='https://mail.google.com/mail/?view=cm&fs=1&to=seyispecial17@gmail.com'
-					target='_blank'
-					rel='noreferrer'
-				>
-					<i className='fa-solid fa-envelope-open-text'></i>
+				<a href="https://mail.google.com/mail/?view=cm&fs=1&to=seyispecial17@gmail.com" target="_blank" rel="noreferrer">
+					<i className="fa-solid fa-envelope-open-text"></i>
 				</a>
-				<a href='https://wa.me/2349017299030' target='_blank' rel='noreferrer'>
-					<i className='fa-brands fa-whatsapp'></i>
+				<a href="https://wa.me/2349017299030" target="_blank" rel="noreferrer">
+					<i className="fa-brands fa-whatsapp"></i>
 				</a>
+				{/* <a href="/files/Resume.pdf">
+					<i className="fa-brands fa-resume"></i>
+					<i className="fa-brands fa-pdf"></i>
+				</a> */}
 			</div>
 			<style jsx>{`
 				.socials {
