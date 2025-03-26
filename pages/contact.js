@@ -23,7 +23,7 @@ const Contact = ({ service_id, template_id, user_id }) => {
 		emailjs.sendForm(service_id, template_id, form.current, user_id).then(
 			(result) => {
 				//Show success
-				setMsg("Email sent successfully. I'll get back as soon as I can.");
+				setMsg("Email has been sent. I'll get back to you as soon as I can.");
 				showPopUp();
 				clearInputs();
 				setIsSending(false);
