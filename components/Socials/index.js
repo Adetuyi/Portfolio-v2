@@ -16,7 +16,7 @@ const Socials = () => {
 				<a href="https://wa.me/2349017299030" target="_blank" rel="noreferrer">
 					<i className="fa-brands fa-whatsapp"></i>
 				</a>
-				{/* <a href="/files/Resume.pdf">
+				{/* <a href="/files/Adetuyi-Resume.pdf">
 					<i className="fa-brands fa-resume"></i>
 					<i className="fa-brands fa-pdf"></i>
 				</a> */}
