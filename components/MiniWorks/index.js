@@ -11,25 +11,25 @@ const MiniWorks = () => {
 			<h2>My Portfolio</h2>
 			<p>
 				A small gallery of recent projects. Interested in seeing some more ? Visit my{' '}
-				<Link href='/works'>
-					<a>works</a>
+				<Link href="/projects">
+					<a>projects</a>
 				</Link>{' '}
 				page.
 			</p>
-			<Link href='/works'>
+			<Link href="/projects">
 				<a>
-					<Button text='See More' />
+					<Button text="See More" />
 				</a>
 			</Link>
 			<hr />
-			<div className='cube'>
+			<div className="cube">
 				<Cube rotation={rotation} />
 
 				<button onClick={() => setRotation(rotation - 90)}>
-					<i className='fas fa-angle-right'></i>
+					<i className="fas fa-angle-right"></i>
 				</button>
 				<button onClick={() => setRotation(rotation + 90)}>
-					<i className='fas fa-angle-left'></i>
+					<i className="fas fa-angle-left"></i>
 				</button>
 			</div>
 			<hr />
