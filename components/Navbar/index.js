@@ -9,32 +9,32 @@ const Navbar = () => {
 
 	return (
 		<Wrapper>
-			<a href='#main-content'>Skip to main content</a>
-			<nav className='contained'>
-				<Link href='/'>
+			<a href="#main-content">Skip to main content</a>
+			<nav className="contained">
+				<Link href="/">
 					<a>{logo}</a>
 				</Link>
 				<section className={!isVisible ? 'inactive' : null}>
 					<header>
-						<Link href='/'>
+						<Link href="/">
 							<a>{logo}</a>
 						</Link>
 						<h2>Seyi</h2>
 						<p>web developer</p>
 					</header>
-					<Link href='/'>
+					<Link href="/">
 						<a>Home</a>
 					</Link>
-					<Link href='/about'>
+					<Link href="/about">
 						<a>About</a>
 					</Link>
-					<Link href='/skills'>
+					<Link href="/skills">
 						<a>Skills</a>
 					</Link>
-					<Link href='/works'>
-						<a>Works</a>
+					<Link href="/projects">
+						<a>Projects</a>
 					</Link>
-					<Link href='/contact'>
+					<Link href="/contact">
 						<a>Contact</a>
 					</Link>
 

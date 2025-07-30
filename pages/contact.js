@@ -21,20 +21,23 @@ const Contact = ({ service_id, template_id, user_id }) => {
 
 	const sendEmail = () => {
 		emailjs.sendForm(service_id, template_id, form.current, user_id).then(
-			result => {
+			(result) => {
 				//Show success
-				setMsg("Email sent successfully. I'll get back as soon as I can.");
+				setMsg("Email has been sent. I'll get back to you as soon as I can.");
 				showPopUp();
 				clearInputs();
 				setIsSending(false);
 			},
-			error => {
+			(error) => {
 				console.log(error.text);
-				new Error('Unable to send email, try contacting through another means.');
+				setMsg('Unable to send email, try contacting through another means.');
+				showPopUp();
+				setIsSending(false);
+				// new Error('Unable to send email, try contacting through another means.');
 			}
 		);
 	};
-	const validateEmail = emailLocal => {
+	const validateEmail = (emailLocal) => {
 		let regex =
 			/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
@@ -55,7 +58,7 @@ const Contact = ({ service_id, template_id, user_id }) => {
 	}
 
 	const sayHello = useCallback((entries, observer) => {
-		entries.forEach(entry => {
+		entries.forEach((entry) => {
 			if (entry.isIntersecting) {
 				setMsg("Hi there, don't hesitate to reach out.");
 				showPopUp();
@@ -106,73 +109,63 @@ const Contact = ({ service_id, template_id, user_id }) => {
 	return (
 		<>
 			<Navbar />
-			<Wrapper className='contained'>
+			<Wrapper className="contained">
 				<h1>Reach Out</h1>
 				<br />
-				<p>
-					I’m interested in freelance opportunities. If you have any request or question,
-					don’t hesitate to use the form.
-				</p>
+				<p>I’m interested in freelance opportunities. If you have any request or question, don’t hesitate to use the form.</p>
 				<br />
 
-				<div className='group'>
-					<Form onSubmit={submitForm} ref={form} autoComplete='new-password'>
+				<div className="group">
+					<Form onSubmit={submitForm} ref={form} autoComplete="new-password">
 						<section>
 							<input
-								type='text'
-								autoComplete='off'
-								name='user_name'
-								placeholder='Name *'
+								type="text"
+								autoComplete="off"
+								name="user_name"
+								placeholder="Name *"
 								value={name}
-								onChange={e => setName(e.target.value)}
+								onChange={(e) => setName(e.target.value)}
 							/>
 						</section>
 						<section>
 							<input
-								type='text'
-								autoComplete='off'
-								name='user_email'
-								placeholder='Email *'
+								type="text"
+								autoComplete="off"
+								name="user_email"
+								placeholder="Email *"
 								value={email}
-								onChange={e => setEmail(e.target.value)}
+								onChange={(e) => setEmail(e.target.value)}
 							/>
 						</section>
-						<section className='full'>
+						<section className="full">
 							<input
-								type='text'
-								autoComplete='off'
-								name='subject'
-								placeholder='Subject'
+								type="text"
+								autoComplete="off"
+								name="subject"
+								placeholder="Subject"
 								value={subject}
-								onChange={e => setSubject(e.target.value)}
+								onChange={(e) => setSubject(e.target.value)}
 							/>
 						</section>
 
-						<section className='full'>
+						<section className="full">
 							<textarea
-								name='message'
-								cols='90'
-								rows='8'
-								placeholder='Message *'
+								name="message"
+								cols="90"
+								rows="8"
+								placeholder="Message *"
 								maxLength={1000}
 								value={message}
-								onChange={e => setMessage(e.target.value)}
+								onChange={(e) => setMessage(e.target.value)}
 							></textarea>
 						</section>
-						{isSending ? (
-							<div className='loading'></div>
-						) : (
-							<Button text='Send' type='submit' />
-						)}
+						{isSending ? <div className="loading"></div> : <Button text="Send" type="submit" />}
 					</Form>
-					<div className='bot' ref={bot}>
-						<div
-							className={isMsgShowing ? 'feedback active' : 'feedback'}
-							ref={feedback}
-						>
+					<div className="bot" ref={bot}>
+						<div className={isMsgShowing ? 'feedback active' : 'feedback'} ref={feedback}>
 							{msg}
 						</div>
-						<Image width={500} height={300} src='/svgs/contact.svg' alt='' />
+						<Image width={500} height={300} src="/svgs/contact.svg" alt="" />
 					</div>
 				</div>
 				<Socials />

@@ -12,23 +12,20 @@ const Projects = () => {
 		<>
 			<Navbar />
 			<Wrapper>
-				<h1>Works</h1>
+				<h1>Projects</h1>
 				<br />
-				<div className='worksCon'>
+				<div className="worksCon">
 					{data.works.map((work) => (
-						<div className='scene' key={work.name}>
+						<div className="scene" key={work.name}>
 							<Card>
-								<div
-									className='front'
-									style={{ backgroundImage: `url(${work.mImage || work.image})` }}
-								>
-									<div className='bottom'>
+								<div className="front" style={{ backgroundImage: `url(${work.mImage || work.image})` }}>
+									<div className="bottom">
 										<h2>{work.name}</h2>
 
-										<div className='buttons'>
+										<div className="buttons">
 											<Link href={work.link}>
-												<a target='_blank' rel='noreferrer'>
-													<Button text='Visit' />
+												<a target="_blank" rel="noreferrer">
+													<Button text="Visit" />
 												</a>
 											</Link>
 											<button
@@ -37,22 +34,22 @@ const Projects = () => {
 														'flipped'
 													);
 												}}
-												className='flipBtn'
+												className="flipBtn"
 											>
 												Flip
 											</button>
 										</div>
 									</div>
 								</div>
-								<div className='back'>
+								<div className="back">
 									<h2>{work.name}</h2>
 									<p>{work.desc}</p>
 									<Link href={work.link}>
-										<a target='_blank' rel='noreferrer'>
-											<Button text='Visit' active={true} />
+										<a target="_blank" rel="noreferrer">
+											<Button text="Visit" active={true} />
 										</a>
 									</Link>
-									<div className='langs'>
+									<div className="langs">
 										{work.langs.map((lang, index) => {
 											if (index === work.langs.length - 1) {
 												return lang;
@@ -63,11 +60,9 @@ const Projects = () => {
 									</div>
 									<button
 										onClick={(e) => {
-											e.target.parentElement.parentElement.classList.toggle(
-												'flipped'
-											);
+											e.target.parentElement.parentElement.classList.toggle('flipped');
 										}}
-										className='flipBtn'
+										className="flipBtn"
 									>
 										Flip
 									</button>

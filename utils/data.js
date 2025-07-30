@@ -39,6 +39,22 @@ const data = {
 	},
 	works: [
 		{
+			image: '/imgs/tmdb.png',
+			mImage: '/imgs/mtmdb.png',
+			name: 'The Movie DB',
+			desc: 'A site for getting infomation on movies',
+			link: 'https://movies-app-pp.netlify.app/',
+			langs: ['React', 'CSS'],
+		},
+		{
+			image: '/imgs/chatty.png',
+			mImage: '/imgs/mchatty.png',
+			name: 'Chatty',
+			desc: 'A messaging application (you might need to wait for 60secs for Render to display the site)',
+			link: 'https://chat-app-mern-topl.onrender.com/',
+			langs: ['Node', 'Express', 'React', 'CSS'],
+		},
+		{
 			image: '/imgs/shopify.png',
 			name: 'Shopify',
 			desc: 'An ecommerce site for looking up and buying of goods',
@@ -52,14 +68,6 @@ const data = {
 			desc: "Create an invoice with a set time to pay. Dont't forget to mark as paid once you pay",
 			link: 'https://invoice-app-pp.herokuapp.com/',
 			langs: ['Node', 'Express', 'HTML', 'CSS'],
-		},
-		{
-			image: '/imgs/tmdb.png',
-			mImage: '/imgs/mtmdb.png',
-			name: 'The Movie DB',
-			desc: 'A site for getting infomation on movies',
-			link: 'https://movies-app-pp.netlify.app/',
-			langs: ['React', 'CSS'],
 		},
 		{
 			image: '/imgs/rps.png',
