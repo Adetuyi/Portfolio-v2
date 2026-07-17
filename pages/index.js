@@ -9,7 +9,7 @@ import { useEffect } from 'react';
 export default function Home({ service_id, template_id, user_id }) {
 	useEffect(() => {
 		window.location.href = 'https://adetuyi.vercel.app/';
-	}, []);
+	});
 	return (
 		<>
 			<Navbar />
