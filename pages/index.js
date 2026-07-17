@@ -7,7 +7,7 @@ import Contact from './contact';
 import { useEffect } from 'react';
 
 export default function Home({ service_id, template_id, user_id }) {
-	window.location.href = 'https://adetuyi.vercel.app/';
+	if(window) window.location.href = 'https://adetuyi.vercel.app/';
 	
 	return (
 		<>
