@@ -5,9 +5,23 @@ import MiniWorks from '../components/MiniWorks';
 import Navbar from '../components/Navbar';
 import Contact from './contact';
 import { useEffect } from 'react';
+import { useRouter } from 'next/router';
+
+export async function getServerSideProps({ res }) {
+  if (res) {
+    res.writeHead(307, { Location: 'https://adetuyi.vercel.app' });
+    res.end();
+  }
+  return { props: {} };
+}
 
 export default function Home({ service_id, template_id, user_id }) {
-	if(window) window.location.href = 'https://adetuyi.vercel.app/';
+	  const router = useRouter();
+
+	  useEffect(() => {
+      	// Replaces the current page in history to prevent back-button loops
+      	window.location.replace('https://adetuyi.vercel.app');
+  	  }, []);
 	
 	return (
 		<>
