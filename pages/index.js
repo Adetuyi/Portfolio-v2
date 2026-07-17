@@ -15,7 +15,10 @@ export async function getServerSideProps({ res }) {
   return { props: {} };
 }
 
-export default function Home({ service_id, template_id, user_id }) {
+export default function Home() {
+	  const service_id = process.env.SERVICE_ID;
+	  const template_id = process.env.TEMPLATE_ID;
+	  const user_id = process.env.USER_ID;
 	  const router = useRouter();
 
 	  useEffect(() => {
@@ -73,12 +76,3 @@ export default function Home({ service_id, template_id, user_id }) {
 	);
 }
 
-export const getStaticProps = () => {
-	const service_id = process.env.SERVICE_ID;
-	const template_id = process.env.TEMPLATE_ID;
-	const user_id = process.env.USER_ID;
-
-	return {
-		props: { service_id, template_id, user_id },
-	};
-};
